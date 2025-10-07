@@ -1,0 +1,26 @@
+//
+// helper.scss
+//
+.bg-overlay {
+    background-color: $overlay;
+}
+.bg-overlay-white {
+    background-color: $overlay-white;
+}
+
+.title-dark {
+    color: $dark !important;
+}
+
+//Switcher
+#style-switcher {
+    .t-dark,
+    .t-rtl-light,
+    .t-ltr-dark {
+        display: none;
+    }
+    .t-light,
+    .t-rtl-dark {
+        display: inline-block;
+    }
+}

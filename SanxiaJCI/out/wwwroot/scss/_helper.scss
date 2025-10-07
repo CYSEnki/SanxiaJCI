@@ -1,0 +1,71 @@
+//
+// helper.scss
+//
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+//Title
+.title-heading {
+    line-height: 26px;
+    .heading {
+        font-size: 36px;
+    }
+    .para-desc {
+        font-size: 18px;
+    }
+}
+.section-title {
+    position: relative;
+    .title {
+        font-size: 28px;
+    }
+} 
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $overlay;
+}
+.bg-overlay-white {
+    background-color: $overlay-white;
+}
+.para-desc {
+    max-width: 600px;
+}
+.mt-100 {
+    margin-top: 100px;
+}
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+    .shape {
+        bottom: -4px;
+    }
+}
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+    .title-heading {
+        .heading {
+            font-size: 32px !important;
+        }
+        .para-desc {
+            font-size: 18px;
+        }
+    }
+    .section-title {
+        .title {
+            font-size: 24px;
+        }
+    }
+    .mt-60 {
+        margin-top: 60px;
+    }
+}

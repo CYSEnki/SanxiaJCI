@@ -1,0 +1,112 @@
+Index.cshtml
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="flip-grid">
+            @for (var i = 1; i <= 6; i++)
+            {
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h5>Front @i</h5>
+                            <p>這是卡片正面</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5>Back @i</h5>
+                            <p>這是卡片背面</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+----------------------------
+script
+
+
+ $(document).on('click', '.flip-card', function () {
+     if (window.innerWidth <= 768) {
+         // 先把其他卡片切回正面
+         $('.flip-card').not(this).removeClass('clicked');
+
+  // 自己切換
+  $(this).toggleClass('clicked');
+     }
+ });
+ 
+ --------------------------------------------------
+ businessmarketcss.css
+ /*卡片翻轉果*/
+.flip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 正方形 */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-card-front,
+.flip-card-back {
+    background-color: #6699ff;
+    color: white;
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+.flip-card-back {
+    background: #ff9966;
+    transform: rotateY(180deg);
+}
+/* 手機版 */
+@media (max-width: 768px) {
+    .flip-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .flip-card {
+        flex: 0 0 auto;
+        width: 150px;
+    }
+
+        .flip-card:hover .flip-card-inner {
+            transform: none; /* 禁止 hover 翻轉 */
+        }
+
+        .flip-card.clicked .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+}

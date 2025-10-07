@@ -1,0 +1,42 @@
+/* Template Name: Vani - Minimal Portfolio Template
+   Author: Shreethemes
+   E-mail: support@sheethemes.in
+   Version: 2.3.0
+   Created: March 2020
+   File Description: Main Css file of the template
+*/
+
+/********************************/
+/*           INDEX              */
+/*===============================
+ *    01.  Variables            *
+ *    02.  Bootstrap Custom     *
+ *    03.  Components           *
+ *    04.  General              *
+ *    05.  Helper               *
+ *    06.  Menu                 *
+ *    07.  Home                 *
+ *    08.  work                 *
+ *    09.  features             *
+ *    10.  Testi                *
+ *    11.  Team                 *
+ *    12.  Blog                 *
+ *    13.  Contact              *
+ *    14.  Footer               *
+ ===============================*/
+
+@import "variables";
+@import "bootstrap-custom";
+@import "components";
+@import "general";
+@import "helper";
+@import "menu";
+@import "home";
+@import "work";
+@import "features";
+@import "testi";
+@import "team";
+@import "blog";
+@import "contact";
+@import "footer";
+@import "switcher";

@@ -1,0 +1,79 @@
+//
+// variables.scss
+//
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// Color
+$white:                     #ffffff;
+
+$primary:                   #f5aa55;
+$secondary:                 #838c97;
+$success:                   #23b456;
+$warning:                   #ec640f;
+$info:                      #24abc0;
+$danger:                    #dd2427;
+$dark:                      #35404e;
+$black:                     #273444;
+$muted:                     #8492a6;
+$light:                     #f8f9fc; 
+$footer:                     darken($dark, 1%);
+
+// Gray
+$gray-100:                  #f8f9fa;
+$gray-200:                  #e9ecef;
+$gray-300:                  #dee2e6;
+$gray-400:                  #ced4da;
+$gray-500:                  #adb5bd;
+$gray-600:                  #6c757d; 
+$gray-700:                  #495057;
+
+// Overlay
+$overlay:                   rgba($dark, 0.5);
+$overlay-white:             rgba($white, 0.8);
+// Body Background
+$shadow:                    0 0 5px rgba($black,.15);
+// Base font
+$font-size-base:            15px;
+
+$font-family-base:          'Inter', sans-serif;
+$font-family-secondary:     'Inter', sans-serif;
+
+// Switcher
+$purple:                    #7952B3;
+$cyan:                      #66ccff;
+$green:                     #52cc99;
+$red:                       #f86446;
+$blue:                      #6563ff;
+$default:                   #f5aa55;
+
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "info": $info,
+    "danger": $danger,
+    "dark": $dark,
+    "muted": $muted,
+    "light": $light,
+    "footer": $footer,
+);
+
+$font-sizes: (
+    h1: 42px,
+    h2: 36px,
+    h3: 30px,
+    h4: 24px,
+    h5: 18px,
+    h6: 14px,
+);
+
+$display-font-sizes: (
+    "display-1": 80px,
+    "display-2": 72px,
+    "display-3": 64px,
+    "display-4": 56px,
+);

@@ -1,0 +1,11 @@
+//
+// general.scss
+//
+
+body {
+    color: $dark;
+    background: $white;
+}
+::selection {
+    color: $dark;
+}

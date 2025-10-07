@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三峽青商 - @ViewData["Title"]</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+@*     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Template_Vany.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Template_Vany.css" asp-append-version="true" /> *@
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="~/images/favicon.ico" asp-append-version="true" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css" asp-append-version="true" />
+    <!-- Icon -->
+    <link href="~/css/materialdesignicons.css" rel="stylesheet" />
+    @* <link href="~/css/materialdesignicons.min.css" rel="stylesheet" /> *@
+    <link rel="stylesheet" href="~/css/style.min.css" type="text/css" id="theme-opt" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/colors/blue.css" id="color-opt" asp-append-version="true">
+
+    <style>
+        .logo-font{
+            font-size: 1.5rem;
+        }
+
+        .logo-dark-mode{
+            color:white;
+        }
+    </style>
+    @RenderSection("Styles", required: false)
+
+</head>
+<body>
+    <!-- Navbar STart -->
+    <header id="topnav" class="defaultscroll sticky" style="width:inherit;">
+        <div class="container-fluid" style="padding-left:2%; padding-right:5%;">
+            <!-- Logo container-->
+            <a class="logo d-flex align-items-center" asp-action="Index" asp-controller="Home">
+                <img src="~/images/logo-dark.png" height="60" class=" pl-5" alt="">
+                @* <img src="~/images/logo-light.png" height="60" class="logo-dark-mode pl-5" alt=""> *@
+                <span class="logo-font fw-bold">三峽國際青年商會</span>
+            </a>            <!-- Logo End -->
+            <div class="menu-extras">
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+            <!-- Navigation -->
+            @await Html.PartialAsync("_Navigation")
+            <!-- end navigation -->
+
+        </div><!--end container-->
+    </header><!--end header-->
+    <!-- Navbar End -->
+    <!-- Start content -->
+    <div class="container-fluid p-0" style="width:100%;">
+            @RenderBody()
+    </div>
+    <!-- End content -->
+    <!-- footer start -->
+    @await Html.PartialAsync("_Footer")
+    <!-- footer end -->
+    <!-- Back to top -->
+    <a href="#" class="back-to-top rounded shadow text-center" id="back-to-top">
+        <i class="mdi mdi-chevron-up mdi-18px d-block text-primary"> </i>
+    </a>
+    <!-- Back to top -->
+    <!-- Style switcher -->
+@*     @await Html.PartialAsync("_Switcher")
+ *@   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    @* <script src="~/js/site.js" asp-append-version="true"></script> *@
+
+    <!-- end Style switcher -->
+    <!-- javascript -->
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // setTheme('style');
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <!-- Switcher -->
+    <script src="~/js/switcher.js"></script>
+    <!-- Main Js -->
+    <script src="~/js/app.js"></script>
+
+</body>
+</html>

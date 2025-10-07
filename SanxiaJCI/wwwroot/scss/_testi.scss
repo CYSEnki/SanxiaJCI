@@ -1,0 +1,59 @@
+//
+// testi.scss
+//
+.testimonial {
+    cursor: pointer;
+    .review {
+        .base {
+            transition: all 0.5s ease;
+            font-weight: 500;
+        }
+        &.arrow-bottom {
+            position: relative;
+            &:after {
+                content: " ";
+                position: absolute;
+                top: 100%;                    
+                left: 45%;
+                height: 0;
+                width: 0;
+                border: solid transparent;
+                border-top-color: darken($light, 2%);
+                border-width: 15px;
+            }
+        }
+    }
+    .name-content {
+        .image {
+            img {
+                height: 80px;
+            }
+        }
+    }
+    &:hover {
+        .review {
+            .base {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.tns-nav {
+    text-align: center;
+    margin-top: 10px;
+    button {
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        background: rgba($primary, 0.4) !important;
+        transition: all 0.5s ease;
+        opacity: 1;
+        margin: 4px;
+        border: none;
+        &.tns-nav-active {
+            background: $primary !important;
+            width: 10px;
+        }
+    }
+}

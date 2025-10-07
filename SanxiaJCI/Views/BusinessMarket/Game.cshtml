@@ -1,0 +1,485 @@
+﻿@{
+    ViewData["Title"] = "心理測驗";
+}
+<link href="~/css/fontawesome/css/all.css" rel="stylesheet" />
+<link href="~/css/Chat.css" rel="stylesheet" />
+@section Styles {
+    <style>
+         p{
+            color: white !important;
+        }
+
+        .result-container label,h5 {
+            color: white !important;
+        }
+        .text-white{
+            color: white !important;
+        }
+        /* 按鈕設計優化 */
+        .option-btn {
+            min-height: 60px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            padding: 15px 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+            .option-btn:hover {
+                background-color: #0d6efd;
+                color: white !important;
+                transform: translateY(-2px);
+            }
+
+        .fade-transition {
+            opacity: 1;
+            transition: opacity 0.6s ease;
+        }
+
+        .fade-out {
+            opacity: 0 !important;
+        }
+
+        .option-btn {
+            min-height: 60px;
+        }
+
+        #result-container img {
+            max-width: 220px;
+        }
+
+        #quiz-progress {
+            font-weight: bold;
+            font-size: 0.9rem;
+            line-height: 25px;
+        }
+
+        .bg-jci-round{
+            background: linear-gradient(250deg, #246fa8, #624E7E);
+        }
+        .bg-jci{
+            background-color: #0d6efd;
+        }
+
+        textarea {
+            color: #f0f0f0; /* 淺灰色字體 */
+            background-color: #141b2b; /* 深藍底色（固定） */
+            border: 1px solid #2a2f40;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            resize: vertical;
+            box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.05);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+            textarea::placeholder {
+                color: #888ca1;
+                font-style: italic;
+            }
+
+            textarea:hover {
+                border-color: #3399ff;
+            }
+
+            textarea:focus {
+                outline: none;
+                border-color: deepskyblue;
+                box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.2); /* 柔和光暈 */
+            }
+
+    </style>
+}
+<section class="section">
+    <div class="container py-5" style="min-height:750px;">
+        <!-- 進度條 -->
+        <div class="progress m-4" style="height: 25px;" id="progress-wrapper">
+            <div id="quiz-progress" class="progress-bar bg-jci-round progress-bar-striped" role="progressbar"
+                 style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                第 1 / 20 題
+            </div>
+        </div>
+        <!-- 問題卡片 -->
+        <div id="quiz-container" class="card fade-transition">
+            <div class="card-body">
+                <h5 id="question-text" class="card-title text-white mb-4">載入中...</h5>
+                <div id="options" class="d-grid gap-3"></div>
+            </div>
+        </div>
+        <!-- 結果卡片容器 -->
+        <div id="result-container" class="container mt-5 d-none fade-transition" data-aos="fade-up" data-aos-delay="200">
+            <div class="card shadow rounded-4">
+                <div class="card-body text-center py-5">
+                    <!-- 分析類型 -->
+                    <h6 id="analysis-type" class="text-white mb-3"></h6>
+
+                    <!-- 動物代表區塊 -->
+                    <h2 id="result-name" class="fw-bold text-white display-5 "></h2>
+                    <img id="result-image" src="" alt="代表動物圖片" class="img-fluid my-4" style="max-height: 500px;" />
+                    <p id="result-description" class="fs-5 mb-5"></p>
+
+                    <!-- 領導風格總結 -->
+                    <div class="text-start px-md-5 mb-5" data-aos="fade-right" data-aos-delay="400">
+                        <h4 class="fw-bold text-primary">適合的管理風格</h4>
+                        <p class="fs-5"><strong>主要風格：</strong><span id="result-leadership-main"></span></p>
+                        <p class="fs-5"><span id="result-leadership-description"></span></p>
+                        <p class="fs-5"><strong>搭配建議：</strong><span id="result-leadership-combo"></span></p>
+                        <p class="fs-5"><strong>搭配優勢：</strong><span id="result-leadership-advantage"></span></p>
+                        <p class="fs-5"><strong>適用情境：</strong><span id="result-leadership-context"></span></p>
+                    </div>
+
+                    <!-- 創業建議區塊 -->
+                    <div class="text-start px-md-5 mb-5" data-aos="fade-left" data-aos-delay="600">
+                        <h4 class="fw-bold text-success">創業建議方向</h4>
+                        <p id="result-entrepreneurship" class="fs-5 mb-4"></p>
+                    </div>
+
+                    <!-- 備註 -->
+                    <p class="mt-2 text-danger">
+                        請注意：以上創業模式建議旨在結合人格強項與興趣供參考。
+                        創業仍需考量市場需求與個人專業，建議先小成本試驗、蒐集反饋再逐步擴大。
+                    </p>
+
+                    <!-- 重新測驗 -->
+                    <a href="@Url.Action("Game")" class="btn btn-outline-primary mt-4">重新測驗</a>
+
+                    <!--AI背景(姓名/職業/年齡)-->
+                    <div class="container my-3 px-3 py-3 bg-light rounded shadow-sm" id="userInfoForm">
+                        <h5 class="mb-3">🧠 建立你的對話背景</h5>
+                        <div class="form-group mb-2">
+                            <label class="text-white">姓名</label>
+                            <div class="input-group">
+                                <input type="text" id="userName" class="form-control" placeholder="請輸入姓名">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="generateRandomName()">隨機產生</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label class="text-white">性別</label><br />
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="genderMale" value="男">
+                                <label class="form-check-label text-white" for="genderMale">男</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="女">
+                                <label class="form-check-label text-white" for="genderFemale">女</label>
+                            </div>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label class="text-white">出生年份</label>
+                            <select id="birthYear" class="form-control">
+                                <option value="">請選擇年份</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label class="text-white">當前職業</label>
+                            <input type="text" id="occupation" class="form-control" placeholder="請輸入職業，如設計師、學生等">
+                        </div>
+
+                        <div class="text-right mt-3">
+                            <button class="btn btn-primary" onclick="submitUserInfo()">開始對話</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--AI Chat-->
+<div class="floating-button" id="chatButton">
+    <i class="fa-regular fa-compass"></i>
+</div>
+
+<div id="chatWindow" class="modal fade show" tabindex="-1" role="dialog" aria-hidden="false">
+    <div id="chatDialog" class="modal-dialog modal-dialog-right w-100 h-100 m-0">
+        <div class="modal-content h-100 d-flex flex-column">
+            <div class="bg-chat-head d-flex align-items-center w-100">
+                <div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
+                    <span id="chatHeader" class="pl-3" style="">峽青AI創業夥伴</span>
+                </div>
+                <button id="closeButton" type="button" class="close position-absolute pos-top pos-right mr-2" aria-label="Close">
+                    <span aria-hidden="false"><i class="fas fa-times"></i></span>
+                </button>
+            </div>
+            <div class="d-flex flex-column h-100 bg-white">
+                <div class="d-flex flex-column flex-grow-1 bg-white" style="height:500px;">
+                    <!-- Chat Messages -->
+                    <div class="custom-scroll d-flex flex-column flex-grow-1 overflow-auto">
+                        <div id="chatMessages" class="w-100 p-4 flex-grow-1 overflow-auto"></div>
+                        <div id="typingIndicator" class="text-muted p-2" style="opacity:0;">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input -->
+                    <div id="chatInputContainer" class="d-flex flex-column">
+                        <div class="border-faded border-right-0 border-bottom-0 border-left-0 flex-1 mr-3 ml-3 position-relative shadow-top">
+                            <div class="pt-1 pb-0 pr-0 pl-0 rounded-0" tabindex="-1">
+                                <textarea id="message" class=" w-100" style="height:150px;" placeholder=" 請輸入您的問題"></textarea>
+                            </div>
+                        </div>
+                        <div class="height-8 px-4 pb-2 w-100 d-flex justify-content-between align-items-center">
+
+                            <!-- 左邊的按鈕 -->
+                            <div class="">
+                              
+                            </div>
+
+                            <!-- 右邊的按鈕 -->
+                            <button id="sendButton" class="btn btn-send">
+                                送出
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input id="resultType" type="text" style="display:none" />
+
+@section Scripts {
+	<script src="~/js/Dify/Chat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+
+        $(function () {
+           $('[data-toggle="tooltip"]').tooltip()
+         })
+        
+        const returnMessage = {
+            sender: '人格導師',
+            text: `你好，我是你的 AI 對話夥伴 🐾。根據你的測驗結果` +  $('#resultType').val() + `，我可以幫助你探索以下三個面向：\n\n1️⃣ 依照你的個性，給出創業或職涯發展建議。\n2️⃣ 協助解析你在人際與職場中的常見困境。\n3️⃣ 根據你的領導風格，推薦適合的管理策略與合作對象。\n\n請問你想從哪個方向開始呢？`,
+            buttons: [
+                {
+                    type: 'extend',
+                    value: [
+                        { label: '創業建議', content: '我想知道我的人格適合創業嗎？' },
+                        { label: '工作困境', content: '我在人際合作中常卡關，怎麼辦？' },
+                        { label: '領導風格', content: '我適合哪種管理方式？' }
+                    ]
+                }
+            ]
+        }
+        setTimeout(() => { addMessage(returnMessage, false);}, 500);
+    </script>
+    <script>
+        $(function(){
+
+            const theme = 'style-dark';
+            // setTheme('style-dark');
+            document.getElementById('theme-opt').href = '../css/' + theme + '.min.css';
+
+            AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+            });
+        })
+
+        const quizUrl = '@Url.Action("GetQuizData", "BusinessMarket")'; // 或替換為後端 Model 綁定來源
+        let questions = [], results = {}, analysisType = "";
+        let currentQuestion = 0, answers = [];
+
+        //更新進度條
+        function updateProgressBar() {
+            const progressBar = document.getElementById("quiz-progress");
+            const total = questions.length;
+            const current = currentQuestion + 1;
+            const percent = Math.floor((current / total) * 100);
+
+            progressBar.style.width = `${percent}%`;
+            progressBar.setAttribute('aria-valuenow', percent);
+            progressBar.innerText = `第 ${current} / ${total} 題`;
+        }
+
+        function loadQuizData() {
+            fetch(quizUrl)
+                .then(res => res.json())
+                .then(data => {
+                    questions = data.questions;
+                    results = data.results;
+                    analysisType = data.analysisType;
+                    showQuestion(currentQuestion);
+                })
+                .catch(err => {
+                    document.getElementById('question-text').innerText = '載入失敗...';
+                    console.error(err);
+                });
+        }
+
+        function showQuestion(index) {
+            const q = questions[index];
+            const qText = document.getElementById('question-text');
+            const optionsDiv = document.getElementById('options');
+
+            qText.innerText = q.text;
+            optionsDiv.innerHTML = "";
+
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = "btn btn-outline-primary option-btn";
+                btn.innerText = opt.text;
+                btn.onclick = () => handleAnswer(opt.score);
+                optionsDiv.appendChild(btn);
+            });
+            updateProgressBar();
+        }
+        function handleAnswer(score) {
+            answers.push(score); // 每次 push 一組 score，例如 ["N", "P"]
+
+            const card = document.getElementById('quiz-container');
+            card.classList.add('fade-out');
+
+            card.addEventListener('transitionend', function onFadeOut() {
+                card.removeEventListener('transitionend', onFadeOut);
+
+                if (currentQuestion < questions.length - 1) {
+                    currentQuestion++;
+                    showQuestion(currentQuestion);
+                    card.classList.remove('fade-out');
+                } else {
+                    document.getElementById('quiz-container').classList.add('d-none');
+                    showResult();
+                }
+            });
+        }
+
+        function calculateResult() {
+            const dimensions = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+
+            // answers 是一組 score 陣列：例如 ["N", "P"]
+            answers.forEach(scoreArray => {
+                scoreArray.forEach(dim => {
+                    dimensions[dim] = (dimensions[dim] || 0) + 1;
+                });
+            });
+
+            // 組合出四個 MBTI 維度
+            const resultType =
+                (dimensions.E >= dimensions.I ? 'E' : 'I') +
+                (dimensions.S >= dimensions.N ? 'S' : 'N') +
+                (dimensions.T >= dimensions.F ? 'T' : 'F') +
+                (dimensions.J >= dimensions.P ? 'J' : 'P');
+            
+            return resultType; // e.g., "INTP"
+        }
+
+        function showResult() {
+            const resultType = calculateResult();
+            const result = results[resultType];
+
+            document.getElementById('analysis-type').innerText = analysisType;
+            document.getElementById('result-name').innerText = result.name;
+            document.getElementById('result-description').innerText = result.description;
+            document.getElementById('result-image').src = result.image;
+
+            // 領導風格區塊
+            document.getElementById('result-leadership-main').innerText = result.leadership.main;
+            document.getElementById('result-leadership-description').innerText = result.leadership.description;
+            document.getElementById('result-leadership-combo').innerText = result.leadership.combo;
+            document.getElementById('result-leadership-advantage').innerText = result.leadership.advantage;
+            document.getElementById('result-leadership-context').innerText = result.leadership.context;
+
+            // 創業建議
+            document.getElementById('result-entrepreneurship').innerText = result.entrepreneurship;
+
+            // 顯示與動畫
+            const resultDiv = document.getElementById('result-container');
+            resultDiv.classList.remove('d-none');
+            setTimeout(() => {
+                resultDiv.classList.add('show');
+                AOS.refresh();
+            }, 10);
+
+            $('#resultType').val(resultType + '-' + result.name);
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("DOMContentLoaded", loadQuizData);
+
+        // 隨機產生姓名
+        const namePool = ["小明", "志軒", "怡君", "芷涵", "昱廷", "子萱", "思妤", "柏睿", "雅婷", "承恩"];
+
+        function generateRandomName() {
+            const random = namePool[Math.floor(Math.random() * namePool.length)];
+            document.getElementById("userName").value = random;
+        }
+        // 驗證表單內容
+        function validateFormAndGetPayload() {
+            const testResult = $('#resultType').val();
+            const name = document.getElementById("userName").value.trim();
+            const gender = document.querySelector('input[name="gender"]:checked')?.value || '';
+            const birthYear = document.getElementById("birthYear").value;
+            const occupation = document.getElementById("occupation").value.trim();
+
+            // === 驗證輸入完整性 ===
+            if (!name || !gender || !birthYear || !occupation) {
+                alert("❗請完整填寫姓名、性別、生日與職業！");
+                chatWindow.classList.remove('show');
+                chatDialog.classList.add('modal-slide-out');
+                chatDialog.classList.remove('modal-slide-in');
+                chatWindow.style.display = 'none';
+                return null;
+            }
+            const result = results[resultType];
+            // === 組合 JSON 資料 ===
+            const payload = {
+                testResult: testResult, // 預設值供測試
+                name: name,
+                age: calculateAgeFromYear(birthYear),
+                occupation: occupation,
+                question: ''
+            };
+
+            return payload;
+        }
+            // 在網頁載入時產生年份列表
+        window.onload = function () {
+            const select = document.getElementById("birthYear");
+            const currentYear = new Date().getFullYear();
+            const startYear = 1940;
+            const endYear = currentYear - 10; // 預設最小年齡為10歲
+
+            for (let y = endYear; y >= startYear; y--) {
+                const option = document.createElement("option");
+                option.value = y;
+                option.textContent = y;
+                select.appendChild(option);
+            }
+        };
+
+        // 計算年齡（改為從年份推算）
+        function calculateAgeFromYear(birthYear) {
+            const year = parseInt(birthYear);
+            const currentYear = new Date().getFullYear();
+            return currentYear - year;
+        }
+        //組成使用者資料
+        function submitUserInfo() {
+            // ✅ 傳送給 AI 問答
+            showTypingIndicator();
+            sendMessage(document.getElementById('message').value);
+
+            chatWindow.classList.add('show');
+            chatDialog.classList.remove('modal-slide-out');
+            chatDialog.classList.add('modal-slide-in');
+            chatWindow.style.display = 'block';
+            // ✅ 隱藏表單
+            document.getElementById("userInfoForm").style.display = "none";
+        }
+
+    </script>
+}

@@ -1,0 +1,310 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!-- Slider -->
+<link rel="stylesheet" href="~/css/tiny-slider.css" />
+<!-- Tobii Lightbox -->
+<link href="~/css/tobii.min.css" rel="stylesheet" type="text/css" />
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="~/css/jcianimation.css" rel="stylesheet" />
+
+<style>
+    .hero-background {
+        position: relative;
+        background: url('/images/sanxiajci/deskback_about.png') left center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: white; /* 確保背景整體不透明 */
+    }
+        .hero-background::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-background .container {
+            position: relative;
+            z-index: 2;
+        }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 1rem;
+        border: none;
+    }
+
+        .card h4 {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .card ul li {
+            padding: 4px 0;
+            color: #444;
+        }
+
+    a {
+        color: #0d6efd;
+        text-decoration: none;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    .rounded-circle {
+        border-radius: 50% !important;
+    }
+
+    .text-white{
+        color: white;
+    }
+
+    .btn-white {
+        color: #293a57;
+        background-color: white;
+        border: 1px solid #293a57;
+        transition: all 0.4s ease-in-out;
+    }
+
+        /* 滑鼠移入時進行顏色與背景顏色的反轉 */
+        .btn-white:hover {
+            color: white;
+            background-color: #293a57;
+        }
+</style>
+
+<!-- Hero Start -->
+@* <section class="bg-half-260 d-table w-100 hero-background">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 mt-5">
+                <div class="title-heading">
+                    <h2>歡迎來到三峽國際青年商會</h2>
+                    <h2 class="heading">我們是 <span class="typed-jci text-primary"></span></h2>
+                    <p class="text-muted para-desc">在這裡，18 至 40 歲的青年齊聚一堂，共同參與國際交流、社會服務與自我成長，實踐領導與影響力。</p>
+                    <div class="mt-4">
+                        <a asp-action="Contact" asp-controller="Home" class="btn btn-primary">立即加入我們</a>
+                    </div>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section--> *@
+<!-- Hero End -->
+<!-- Hero Start -->
+<section class="position-relative w-100 vh-100 overflow-hidden">
+    <!-- 背景影片 -->
+    <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+        <source src="https://storage.googleapis.com/sanxiajci/sanxiajci/hero-video.mp4" type="video/mp4">
+        您的瀏覽器不支援影片播放
+    </video>
+
+    <!-- 半透明遮罩 -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+
+    <!-- Hero 內容 -->
+    <div class="container position-relative z-1 h-100 d-flex align-items-center justify-content-center text-center text-white">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-heading">
+                    <h2>歡迎來到三峽國際青年商會</h2>
+                    <h2 class="heading">我們是 <span class="typed-jci text-white"></span></h2>
+                    <p class="text-light para-desc">
+                        在這裡，18 至 40 歲的青年齊聚一堂，共同參與國際交流、社會服務與自我成長，實踐領導與影響力。
+                    </p>
+                    <div class="mt-4">
+                        <a asp-action="Contact" asp-controller="Home" class="btn btn-white">立即加入我們</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero End -->
+
+
+
+<div class="container" data-aos="fade-up">
+    <h2 class="m-3">JCI 新北市三峽國際青年商會</h2>
+    <h4 style="padding-top:0px;">Sanxia Junior Chamber International</h4>
+    
+</div>
+<!-- 商會基本資料區塊 -->
+<div class="container py-3" data-aos="fade-up">
+    <div class="row align-items-center">
+        <!-- 左側圖片 -->
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="/images/sanxiajci/會長1_v1.png" alt="2025年會長 林昀叡"
+                 class="img-fluid rounded-circle shadow" style="width: 200px; height: 200px; object-fit: cover;">
+            <h5 class="mt-3 fw-bold">2025年會長 林昀叡</h5>
+        </div>
+
+        <!-- 右側卡片 -->
+        <div class="col-md-8">
+            <div class="card shadow-sm rounded-4 p-4">
+                <h4 class="mb-3">三峽青年商會基本資料</h4>
+                <ul class="list-unstyled mb-0">
+                    <li><strong>創會日期：</strong>1981年08月27日（成立第45年）</li>
+                    <li><strong>創會會長：</strong>林新欽</li>
+                    <li><strong>成立次序：</strong>全國第98個分會，隸屬新北市</li>
+                    <li><strong>輔導母會：</strong>新北市土城</li>
+                    <li><strong>會員人數：</strong>41人</li>
+                    <li><strong>秘書人員：</strong>侯志伽</li>
+                    <li><strong>會館地址：</strong>新北市三峽區國際一街96號16樓之3</li>
+                    <li><strong>會館電話：</strong>0988-058-298</li>
+                    <li><strong>電子信箱：</strong><a href="mailto:ray210160@gmail.com">ray210160@gmail.com</a></li>
+                    <li><strong>月會時間：</strong>每月第一週禮拜五（以實際發文為準）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container pb-5" data-aos="fade-up">
+    <div class="row align-items-center mt-4 mt-sm-0">
+        <div class="col-12">
+            <img src="~/images//sanxiajci/2025峽青組織圖.jpg" class="img-fluid rounded shadow" alt="">
+        </div><!--end col-->
+    </div><!--end row-->
+</div>
+
+<div class="container py-5" data-aos="fade-up">
+    <h2 class="mb-3">青商會組織架構</h2>
+    <p>國際青年商會（簡稱JCI）是由18~40歲的青年人所組成的國際性NGO組織，主要目的是提供發展領導才能，培養社會責任感及邁進成就，並廣至世界的舞台上。</p>
+    <p>JCI自1952年引進台灣至今，已發展成台灣指標性國際四大社團，分佈在全台各縣市及鄉鎮擁有近150個分會、7000多位會員及超過10萬位資深的OB會員。JCI每年都舉辦超過千場活動、接近20萬名會員在全世界120個國家、地區活耀地參與各項活動。為了永續發展及更美好的未來盡心盡力，讓世界更美好。</p>
+</div>
+
+<div class="container py-5" data-aos="fade-up">
+    <h2 class="mb-3">青商會與其他國際性社團分別在哪裡？</h2>
+    <p>我們不僅出心力在參與國際事務及社會服務，青商會成員更追求「透過訓練及機會創造」養成各領域的未來領導人。同時青商針對發現與解決在地問題，成為地區與世界的【永續影響力】，只要一個積極公民的參與即可改變世界，歡迎即刻加入成為積極公民！</p>
+</div>
+
+<div class="container py-5" data-aos="fade-up">
+    <h2 class="mb-3">青商四大機會 Opportunity</h2>
+    <div class="row">
+        <div class="col-md-3" data-aos="fade-left" data-aos-delay="100">
+            <div class="card p-3">
+                <h5>個人機會</h5>
+                <p>藉由教育訓練課程、領導機會、志工活動，提升自己。</p>
+            </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-left" data-aos-delay="200">
+            <div class="card p-3">
+                <h5>社區機會</h5>
+                <ul>
+                    <li>參與公益活動</li>
+                    <li>兒童安全教育</li>
+                    <li>關懷弱勢族群</li>
+                    <li>提升在地社會參與與責任</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-left" data-aos-delay="300">
+            <div class="card p-3">
+                <h5>國際機會</h5>
+                <ul>
+                    <li>國際交流及友好會議</li>
+                    <li>世界大會與區域會議</li>
+                    <li>姐妹會交流</li>
+                    <li>國際志工與學習經驗</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-left" data-aos-delay="400">
+            <div class="card p-3">
+                <h5>商業交流</h5>
+                <p>各分會20~40歲以上青年企業家、全台7000名會員及世界超過20萬名會員共同交流，建立跨業合作平台。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5" data-aos="fade-up">
+    <h2 class="mb-3">入會條件與資格</h2>
+    <ul>
+        <li>贊同本會宗旨並自願服務本會信條</li>
+        <li>年滿18歲至40歲男女青年</li>
+        <li>有正當職業、身心健康、思想純正</li>
+    </ul>
+    <p>
+        加入本會須見習三個月<br>
+        見習會員於見習期間繳納為見習費3000元整<br>
+        見習會員應於滿三個月內申請為正式會員，且應列席至少一次以上例會，年會費為15000元整。（見習費可折抵年費）
+    </p>
+</div>
+
+<div class="container py-5" data-aos="fade-up">
+    <h2 class="mb-3">聯絡人資訊</h2>
+    <ul>
+        <li><strong>會長</strong>：林昀叡 0903-158257</li>
+        <li><strong>秘書</strong>：侯志伽 0955-318319</li>
+        <li><strong>會擴主委</strong>：周畯竑 0928-219678</li>
+    </ul>
+</div>
+
+
+@section scripts{
+    <!-- Slider -->
+    <script src="~/js/tiny-slider.js "></script>
+    <script src="~/js/tiny-slider-init.js "></script>
+    <!-- Shuffle and tobii filter plugin -->
+    <script src="~/js/tobii.min.js"></script>
+    @* AOS *@
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+
+                $(function () {
+          const phrases = [
+            "綠色・傳承・熱情",
+            "三峽青商",
+            // "正在改變世界的一群人"
+          ];
+
+          const typedElement = document.querySelector(".typed-jci");
+          let phraseIndex = 0;
+          let charIndex = 0;
+
+          function typeText() {
+            if (!typedElement) return;
+
+            if (charIndex < phrases[phraseIndex].length) {
+              typedElement.textContent += phrases[phraseIndex].charAt(charIndex);
+              charIndex++;
+              setTimeout(typeText, 120);
+            } else {
+              setTimeout(() => {
+                eraseText();
+              }, 1800);
+            }
+          }
+
+          function eraseText() {
+            if (charIndex > 0) {
+              typedElement.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
+              charIndex--;
+              setTimeout(eraseText, 50);
+            } else {
+              phraseIndex = (phraseIndex + 1) % phrases.length;
+              setTimeout(typeText, 400);
+            }
+          }
+
+          typeText();
+        });
+
+
+        AOS.init({
+          duration: 1200,
+          once: true
+        });
+
+    </script>
+
+}

@@ -1,0 +1,559 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+*@
+@{
+    ViewData["Title"] = "青創小聚";
+}
+<link href="~/css/businessmarketcss.css" rel="stylesheet" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+    .object-fit-contain {
+        object-fit: contain;
+    }
+
+    /*輪播卡片效果*/
+    #carouselCards {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .carousel-item {
+        opacity: 0.3;
+        transform: scale(0.85);
+    }
+
+        .carousel-item.active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+    .card-light{
+        color: #293a57;
+    }
+    .card-dark{
+        color: #FFF;
+        background-color: #293a57;
+    }
+
+    .nowrap {
+        white-space: nowrap;
+    }
+</style>
+
+<!-- 電腦版 Banner 區塊 -->
+<section class="hero-desktop">
+    <!-- 框住這兩塊的容器（你可自行定位位置） -->
+    <div style="position: absolute; top: 20%; right: 5%; z-index: 10;">
+
+        <!-- 黑底倒數 -->
+        <div class="countdown-box">
+            活動時間：2025年7月26日<br>上午10:00
+            <div class="countdown-time" id="countdown">倒數中...</div>
+        </div>
+
+        <!-- 白底招商 -->
+        <div class="recruit-link-box mt-2">
+            <a href="https://forms.gle/5Lqewi5m91EsgzU59" target="_blank">
+                🔗 熱情招商中｜立即填寫表單
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- 手機版 Banner 區塊 -->
+<section class="hero-mobile">
+    <div class="mobile-countdown-wrapper">
+        <div class="countdown-box">
+            活動時間：2025年7月26日<br>上午10:00
+            <div class="countdown-time" id="countdown-mobile">倒數中...</div>
+        </div>
+
+        <div class="recruit-link-box">
+            <a href="https://forms.gle/5Lqewi5m91EsgzU59" target="_blank">
+                🔗 熱情招商中｜立即填寫表單
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--Card Carousel-->
+<section class="pt-5">
+    <div class="container">
+        <div class="col-span-1 md:col-span-6 text-center col-end-0 md:col-end-9">
+            <h1 class="text-lg title-font font-medium text-fc-blue tracking-wide">2025 青年創業探索計畫</h1>
+            <div class="flex items-end justify-center">
+                <p class="leading-relaxed text-3xl md:text-[1.8rem] font-bold pb-2" style="color:#a8774f;">興趣 × 數位 × 創業真實場景體驗</p>
+            </div>
+            <h3 class="text-xl title-font font-bold tracking-wide" style="color:#f3b97a;">興趣為起點 × 數位為助力 × 青年創業新契機</h3>
+            <article class="leading-relaxed text-base lg:text-lg lg:tracking-normal md:leading-loose text-justify break-words">
+                本活動以「興趣為起點，數位為助力」為核心，設計一場兼具實體體驗與數位導向的探索旅程。青年可透過市集攤位實作，將自己的興趣與專長轉化為商品或品牌方案，從情境中直觀理解創業過程中面臨的挑戰與成長機會。<br><br>
+                透過講座與工作坊，引導青年認識內容行銷、SEO、社群經營與電子報撰寫等數位工具，建立基本的網路觸及與關係經營能力，進而掌握「導客與轉化」的數位關鍵。此外，活動導入 AI 問答模組與創業論壇等網路平台，鼓勵青年透過數位方式互動、提問與分享，提升學習意願與參與深度。此「興趣驅動＋數位整合」的設計，讓青年在真實創業體驗中掌握數位創業思維與能力，為未來職涯增添更多可能與競爭力。
+            </article>
+        </div>
+
+    </div>
+  
+</section>
+<section class="py-5">
+    <div class="container-fluid">
+        <div class="carousel-wrapper position-relative">
+            <button class="nav-btn left-btn" id="prevBtn">◀</button>
+            <div class="carousel-track" id="carouselTrack"></div>
+            <button class="nav-btn right-btn" id="nextBtn">▶</button>
+        </div>
+    </div>
+</section>
+
+<!--卡片翻轉效果-->
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="row g-4 w-100 justify-content-center" id="cardContainer"></div>
+        </div>
+    </div>
+   
+</section>
+
+<!--招商資訊-->
+<section class="py-5">
+    <div class="container">
+        <!-- 標題文字動畫 -->
+        <h2 class="text-center mb-4" data-aos="fade-up" data-aos-duration="800">
+            青創市集招商說明
+        </h2>
+
+        <!-- 文字區段/段落與列表動畫 -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                    本活動以「興趣為起點，數位為助力」，打造青年創業品牌實踐舞台。誠摯邀請創業/零售攤商加入我們的行列！
+                </p>
+                <ul class="list-unstyled" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                    <li>✅ 時間：2025/07/26 (六) 09:00–15:00</li>
+                    <li>✅ 地點：三峽老街 興隆宮前廣場</li>
+                    <li>✅ 攤位費用：$1100 / 攤（優惠價）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 會場主題 -->
+<section class="pb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">攤商類型說明</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="100">
+                <div class="card h-100 shadow-sm card-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">創業型攤商</h5>
+                        <p class="card-text">以品牌與服務為主，適合推廣顧問服務、課程、品牌諮詢等。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="300">
+                <div class="card h-100 shadow-sm card-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">零售型攤商</h5>
+                        <p class="card-text">以販售商品為主，適合販售飾品、文創、甜點等商品。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 場地介紹 -->
+<section class="py-5" style="color:#293a57; background-image: url('https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E8%88%88%E9%9A%86%E5%AE%AE.webp'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center bg-dark bg-opacity-75 p-4 rounded" data-aos="fade-up">
+                <h2 class="mb-3">攤位配置與假日人流優勢</h2>
+                <p>
+                    本次市集將設攤於<strong>興隆宮建廟前廣場</strong>，場地寬敞平整，鄰近三峽老街主要入口。
+                    全區將依據動線及安全性，規劃約 <strong>20–30 個攤位</strong>，以 OBM 桌與座椅組合設置，確保展示與互動空間充足。
+                </p>
+                <p>
+                    假日期間，三峽老街平均日人流量約為 <strong>5,000–10,000 人次</strong>，其中大量民眾會行經興隆宮參拜、駐足及拍照留念，
+                    是本次市集天然的導流點與曝光熱區。
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- 文字區塊 -->
+            <div class="col-md-6 px-4" data-aos="fade-right">
+                <h3 class="pb-0">場地介紹：</h3>
+                <h3 class="mb-3 pb-0">三峽信仰與文化的核心 <span class="nowrap "> — 興隆宮</span></h3>
+                <p>
+                    位於三峽老街核心的「<strong>興隆宮</strong>」，主祀天上聖母媽祖，已有超過百年歷史，是三峽在地最具代表性的信仰與文化場域之一。
+                </p>
+                <p>
+                    廟宇周邊環繞著紅磚街屋與商圈聚落，每逢假日與廟會皆湧現大量香客與遊客，
+                    興隆宮不僅守護著地方信仰，更是文化、經濟與觀光的樞紐。
+                </p>
+            </div>
+            <!-- 圖片區塊 -->
+            <div class="col-md-6" data-aos="fade-left">
+                <img src="https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E8%88%88%E9%9A%86%E5%AE%AE%E4%BA%BA%E6%BD%AE.webp" alt="三峽興隆宮" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts {
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Countdown Script -->
+    <script>
+
+        $(function () {
+           //setTheme('style-dark');
+           const theme = 'style-dark';
+            // setTheme('style-dark');
+            document.getElementById('theme-opt').href = '../css/' + theme + '.min.css';
+
+            // 🔁 自動輪播控制邏輯
+            let autoSlide;
+            let autoSlideTimeout;
+
+            function startAutoSlide() {
+              autoSlide = setInterval(() => move(1), 3000);
+            }
+
+            function stopAutoSlideTemporarily() {
+              clearInterval(autoSlide);
+              clearTimeout(autoSlideTimeout);
+              autoSlideTimeout = setTimeout(() => {
+                startAutoSlide();
+              }, 5000);
+            }
+
+            // 初始啟動自動輪播
+            startAutoSlide();
+
+            // 滑鼠懸停暫停 / 離開恢復
+            track.addEventListener("mouseenter", () => {
+              clearInterval(autoSlide);
+            });
+            track.addEventListener("mouseleave", () => {
+              stopAutoSlideTemporarily();
+            });
+
+            // 左右按鈕點擊
+            document.getElementById("prevBtn").addEventListener("click", () => {
+              move(-1);
+              stopAutoSlideTemporarily();
+            });
+            document.getElementById("nextBtn").addEventListener("click", () => {
+              move(1);
+              stopAutoSlideTemporarily();
+            });
+
+            // 手機滑動事件
+            let startX = 0;
+            track.addEventListener("touchstart", e => {
+              startX = e.touches[0].clientX;
+            });
+            track.addEventListener("touchend", e => {
+              const delta = e.changedTouches[0].clientX - startX;
+              if (delta > 50) {
+                move(-1);
+                stopAutoSlideTemporarily();
+              } else if (delta < -50) {
+                move(1);
+                stopAutoSlideTemporarily();
+              }
+            });
+
+            //倒數計時
+             function setupCountdown(id) {
+                const targetDate = new Date("2025-07-26T10:00:00+08:00").getTime();
+                const countdownEl = document.getElementById(id);
+        
+                const update = () => {
+                    const now = new Date().getTime();
+                    const diff = targetDate - now;
+                    if (diff < 0) {
+                        countdownEl.innerHTML = "活動已開始";
+                        clearInterval(timer);
+                        return;
+                    }
+                    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const s = Math.floor((diff % (1000 * 60)) / 1000);
+                    countdownEl.innerHTML = `${d}天 ${h}時 ${m}分 ${s}秒`;
+                };
+        
+                update();
+                const timer = setInterval(update, 1000);
+            }
+        
+            window.onload = function () {
+                setupCountdown('countdown');
+                setupCountdown('countdown-mobile');
+            };
+
+
+
+            //卡片翻轉效果
+            $(document).on('click', '.flip-card', function () {
+                if (window.innerWidth <= 768) {
+                    // 先把其他卡片切回正面
+                    $('.flip-card').not(this).removeClass('clicked');
+
+             // 自己切換
+             $(this).toggleClass('clicked');
+                }
+            });
+
+            AOS.init({
+              once: true // 只在進入視口時觸發一次
+            });
+        });
+
+        //輪播卡片效果
+        const data = [
+          { title: "興趣引導 × 市集攤商", image: "https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%89%B5%E6%A5%AD%E5%B0%8F%E8%81%9A/%E5%B8%82%E9%9B%86.jpg", desc: "透過市集攤商體驗，青年從擺攤、定價、服務顧客到蒐集反饋，真實感受創業流程與市場驗證，將「興趣」直接轉化為「創業行動」。" },
+          { title: "創業講座 x 互動設計", image: "https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%89%B5%E6%A5%AD%E5%B0%8F%E8%81%9A/%E8%AC%9B%E5%BA%A7.jpg", desc: "透過講者分享、創意票選牆等互動設計，協助青年瞭解接案、個人品牌、社會創業等多方式經營，開啟更多職涯想像與實際機會。" },
+          { title: "數位技能融入 × 行銷啟蒙", image: "https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%89%B5%E6%A5%AD%E5%B0%8F%E8%81%9A/SEO.jpg", desc: "結合 SEO、內容行銷、社群媒體、電子報與廣告投放等數位行銷主題，讓青年建立經營品牌與精準獲客的一手數位能力，為未來創業加值。" },
+          { title: "青年局 x 在地媒合", image: "https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%89%B5%E6%A5%AD%E5%B0%8F%E8%81%9A/%E9%9D%92%E5%B9%B4%E5%89%B5%E6%A5%AD.jpg", desc: "將透過青年局既有資源，公開招募具有地方特色或創意價值的青年攤商，結合三峽、鶯歌等地區品牌，塑造一場「地方＋青年力量」的創業舞台。" },
+          { title: "創新技術Ｘ新創交流", image: "https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%89%B5%E6%A5%AD%E5%B0%8F%E8%81%9A/AI.jpg", desc: "利用 Chatbot 或其他 AI 線上工具，提供即時創業／行銷建議，並鼓勵青年運用科技進行探索，提升理解與應用的深度。" },
+          { title: "在地創生 × 青年共好", image: "https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%89%B5%E6%A5%AD%E5%B0%8F%E8%81%9A/%E5%9C%A8%E5%9C%B0%E5%89%B5%E7%94%9F.jpg", desc: "以地方特色為基礎連結在地商圈與青年創業者，借助活動促進地方經濟活絡與青壯人口參與，形成「人、地、產」連動，推動永續發展與社區認同" }
+        ];
+
+        const track = document.getElementById("carouselTrack");
+        let currentIndex = 0;
+
+        // 根據index取得Card內容
+        function createCard(index) {
+          const item = data[(index + data.length) % data.length];
+          const card = document.createElement("div");
+          card.className = "carousel-darkcard";
+          card.innerHTML = `
+            <img src="${item.image}" alt="${item.title}" />
+            <h5>${item.title}</h5>
+            <p style="color:#a8774f;">${item.desc}</p>
+          `;
+          return card;
+        }
+
+        
+        function renderCards() {
+          track.innerHTML = "";
+
+          const leftIdx = (currentIndex - 1 + data.length) % data.length;
+          const centerIdx = currentIndex;
+          const rightIdx = (currentIndex + 1) % data.length;
+
+          const left = createCard(leftIdx);
+          const center = createCard(centerIdx);
+          const right = createCard(rightIdx);
+
+          left.classList.add("card-left");
+          center.classList.add("card-r-center");
+          right.classList.add("card-right");
+
+          track.appendChild(left);
+          track.appendChild(center);
+          track.appendChild(right);
+        }
+
+        function move(direction) {
+          const cards = Array.from(track.children);
+          const [left, center, right] = cards;
+
+          // 新卡片
+          const newCardIndex = direction === 1 ? currentIndex + 2 : currentIndex - 2;
+          const newCard = createCard(newCardIndex);
+          newCard.classList.add(direction === 1 ? "card-new-r" : "card-new-l");
+          track.insertBefore(newCard, direction === 1 ? left : null);
+
+          // 強制重繪讓動畫能觸發
+          void newCard.offsetWidth;
+
+          // 設定滑動動畫 class
+          left.className = direction === 1 ? "carousel-darkcard card-out-l" :  "carousel-darkcard card-l-center";
+          center.className = direction === 1 ? "carousel-darkcard card-left" : "carousel-darkcard card-right";
+          right.className = direction === 1 ? "carousel-darkcard card-r-center" : "carousel-darkcard card-out-r";
+          newCard.className = direction === 1 ? "carousel-darkcard card-right animate-in" : "carousel-darkcard card-left animate-in";
+
+          // 更新 index 並延遲重新 render
+          setTimeout(() => {
+            currentIndex = (currentIndex + direction + data.length) % data.length;
+            renderCards();
+          }, 600);
+        }
+
+        renderCards();
+
+        //卡片翻轉效果
+        const flipCardsData = [
+          {
+            front: {
+              title: '新北青商',
+              description: '新北青商雜貨店，銀飾、遊戲、好物一次買齊',
+              backgroundImage: null
+            },
+            back: {
+              title: '',
+              description: '',
+              backgroundImage: 'url("https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%95%86%E5%AE%B6%E5%9C%96%E6%AA%94/%E6%B0%B4%E6%99%B6%E9%A3%BE%E5%93%81.png")'
+            }
+          },
+          {
+            front: {
+              title: '龜記飲料',
+              description: '炎炎夏日，來一杯龜記，沁涼透心脾！',
+              backgroundImage: null
+            },
+            back: {
+              title: '',
+              description: '',
+              backgroundImage: 'url("https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%95%86%E5%AE%B6%E5%9C%96%E6%AA%94/%E9%BE%9C%E8%A8%98%E9%A3%B2%E6%96%99.avif")'
+            }
+          },
+          {
+            front: {
+              title: '龍山分會',
+              description: '香醇咖啡、微醺佳釀，還有別緻禮品等你挖寶',
+              backgroundImage: null
+            },
+            back: {
+              title: '',
+              description: '',
+              backgroundImage: 'url("https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%95%86%E5%AE%B6%E5%9C%96%E6%AA%94/%E9%85%92%E6%B0%B4%E7%A4%BA%E6%84%8F%E5%9C%96.png")'
+            }
+          },
+          {
+            front: {
+              title: '沾沾手作',
+              description: '客製化髮飾 鞋扣',
+              backgroundImage: null
+            },
+            back: {
+              title: '',
+              description: '',
+              backgroundImage: 'url("https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%95%86%E5%AE%B6%E5%9C%96%E6%AA%94/%E6%B2%BE%E6%B2%BE%E6%89%8B%E4%BD%9C2.jpg")'
+            },
+            href:{
+                content: 'https://www.instagram.com/zzhandd/'
+            }
+          },
+          {
+            front: {
+              title: '蘆洲分會',
+              description: '<p>三代傳承的酸香小菜</p><p>與知名酒店盲選第1名大廠出品</p>',
+              backgroundImage: null
+            },
+            back: {
+              title: '',
+              description: '',
+              backgroundImage: 'url("https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%89%9D%E7%9A%AE%E8%BE%A3%E6%A4%92%E8%AA%AA%E6%98%8E%E9%A0%811.jpg")'
+            }
+          },
+          {
+            front: {
+              title: '三峽分會',
+              description: '<p>阿嬤的古早味飲料！</p><p>珂珂生活小物</p>',
+              backgroundImage: null
+            },
+            back: {
+              title: '',
+              description: '',
+              backgroundImage: 'url("https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%95%86%E5%AE%B6%E5%9C%96%E6%AA%94/%E5%8F%A4%E6%97%A9%E5%91%B3%E9%A3%B2%E6%96%99.jpg")'
+            }
+          },
+          {
+            front: {
+              title: '三峽小農',
+              description: '純淨自然，來自三峽土地的芳香精油。',
+              backgroundImage: null
+            },
+            back: {
+              title: '',
+              description: '',
+              backgroundImage: 'url("https://storage.googleapis.com/sanxiajci/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A/%E5%95%86%E5%AE%B6%E5%9C%96%E6%AA%94/%E7%B2%BE%E6%B2%B9%E6%98%AF%E6%84%8F%E5%9C%96.png")'
+            }
+          },
+        ];
+        function renderFlipCards(containerId, cardsData) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = ''; // 清空舊內容
+
+
+                  cardsData.forEach((card, index) => {
+          const frontStyle = card.front.backgroundImage
+            ? `style='background-image: ${card.front.backgroundImage}; background-size: cover; background-position: center;'`
+            : '';
+          const backStyle = card.back.backgroundImage
+            ? `style='background-image: ${card.back.backgroundImage}; background-size: cover; background-position: center;'`
+            : '';
+
+          const link = card.href?.content || '';
+
+          // 建立 a 元素來包裝整張卡片
+          const cardWrapper = link == '' ? document.createElement('div') : document.createElement('a');
+          cardWrapper.href = link;
+          cardWrapper.target = '_blank'; // 在新分頁開啟
+          cardWrapper.className = 'flip-card col-md-6 col-lg-4 d-flex justify-content-center text-decoration-none';
+          cardWrapper.innerHTML = `
+            <div class="flip-card-inner">
+              <div class="flip-card-front" ${frontStyle}>
+                  <h5>${card.front.title}</h5>
+                  <p>${card.front.description}</p>
+              </div>
+              <div class="flip-card-back" ${backStyle}>
+                  <h5>${card.back.title}</h5>
+                  <p>${card.back.description}</p>
+              </div>
+            </div>
+          `;
+
+          container.appendChild(cardWrapper);
+        });
+        }
+
+        // 呼叫渲染
+        renderFlipCards('cardContainer', flipCardsData);
+
+        // 自動翻轉特效
+        let tiltInterval;
+
+        function startAutoFlip(cardIndex = 0) {
+          const allCards = document.querySelectorAll('.flip-card-inner');
+
+          if (!allCards[cardIndex]) return;
+
+          const targetCard = allCards[cardIndex];
+
+          tiltInterval = setInterval(() => {
+            targetCard.classList.add('auto-tilt');
+            setTimeout(() => {
+              targetCard.classList.remove('auto-tilt');
+            }, 800); // 與動畫秒數一致
+          }, 3000); // 每 3 秒微翻一次
+
+          // 停止機制：使用者點擊該卡片
+          allCards[cardIndex].closest('.flip-card').addEventListener('click', () => {
+            clearInterval(tiltInterval);
+            targetCard.classList.remove('auto-tilt');
+          });
+        }
+
+        startAutoFlip(0); // 預設第一張卡片啟用自動微翻
+
+
+    </script>
+    }

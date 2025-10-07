@@ -1,0 +1,479 @@
+﻿/* 通用樣式 */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 電腦版樣式 */
+.hero-desktop {
+    display: block;
+    /*background: url('/images/青創小聚/青創小聚主視覺Banner.png') center center;*/
+    background: url('https://storage.googleapis.com/sanxiajci/businessmarket/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A%E4%B8%BB%E8%A6%96%E8%A6%BABanner.png') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 黑底倒數區塊（通用） */
+.countdown-box {
+    background-color: black;
+    color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 280px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+/* 白底招商區塊（通用） */
+.recruit-link-box {
+    background-color: white;
+    color: #007BBA;
+    padding: 15px 25px;
+    border-radius:10px;
+    min-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+    /* 招商按鈕內文字連結 */
+    .recruit-link-box a {
+        color: #007BBA;
+        text-decoration: none;
+    }
+
+/* 時間與倒數字樣 */
+.countdown-time {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 手機版樣式 */
+.hero-mobile {
+    margin-top: 50px;
+    display: none;
+    /*background: url('/images/青創小聚/青創小聚主視覺MobileBanner.png') top center;*/
+    background: url('https://storage.googleapis.com/sanxiajci/businessmarket/%E9%9D%92%E5%89%B5%E5%B0%8F%E8%81%9A%E4%B8%BB%E8%A6%96%E8%A6%BAMobileBanner.png') top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    min-height: 100vh;
+    min-width: 100%;
+    text-align: center;
+    padding: 80px 20px 120px;
+    box-sizing: border-box;
+}
+/* 手機版倒數與招商整體包裝容器 */
+.mobile-countdown-wrapper {
+    position:relative;
+    top:180px;
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 內容水平置中 */
+    gap: 0; /* 元素間距（可自行調整） */
+    width: 100%;
+}
+
+/* 響應式切換 */
+@media (max-width: 996px) {
+    .hero-desktop {
+        display: none;
+    }
+
+    .hero-mobile {
+        display: block;
+    }
+}
+* {
+    box-sizing: border-box;
+}
+
+/*卡片輪播效果*/
+.carousel-wrapper {
+    max-width: 90%;
+    margin: auto;
+    position: relative;
+    padding: 0 40px; /* 預留按鈕空間 */
+    box-sizing: border-box;
+}
+.carousel-track {
+    position: relative;
+    height: 450px;
+    width: 90%;
+    margin: 0 auto; /* 水平置中 */
+}
+.carousel-darkcard {
+    top: 50px;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    padding: 24px;
+    background: linear-gradient(145deg, #212f45, #1e2b40); /* 更深色質感 */
+    border-radius: 20px;
+    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.02), 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 12px rgba(80, 120, 180, 0.08);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.6s ease, opacity 0.6s ease, left 0.6s ease;
+    color: #a8774f;
+    overflow: hidden;
+}
+
+    .carousel-darkcard::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(200, 240, 255, 0.2), transparent) 0 0 no-repeat, linear-gradient(to left, rgba(200, 240, 255, 0.2), transparent) 100% 0 no-repeat;
+        background-size: 100% 1px, 1px 100%;
+        pointer-events: none;
+        z-index: 2;
+        mix-blend-mode: soft-light;
+    }
+
+    .carousel-darkcard h5 {
+        margin-top: 12px;
+        font-size: 1.2rem;
+        color: #f3b97a;
+        letter-spacing: 0.6px;
+        text-shadow: 0 0 4px rgba(128, 200, 255, 0.2);
+    }
+
+    .carousel-darkcard p {
+        font-size: 0.95rem;
+        color: #a8774f;
+        margin-top: 0.5rem;
+        line-height: 1.5;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-darkcard img {
+        width: 100%; /* 圖片寬度填滿卡片 */
+        height: 160px; /* 強制高度限制 */
+        object-fit: cover; /* 超過比例自動裁切（保持圖片填滿不變形） */
+        border-radius: 10px;
+        box-shadow: 0 6px 14px rgba(0, 150, 255, 0.15);
+        transition: transform 0.3s ease;
+        display: block; /* 移除下方空隙 */
+    }
+
+
+    .carousel-darkcard:hover img {
+        transform: scale(1.03);
+    }
+
+/* 改用 left 定位 */
+.card-left {
+    left: 0%;
+    transform: scale(0.9);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.card-r-center {
+    left: 50%;
+    transform: translateX(-50%) scale(1.05);
+    opacity: 1;
+    z-index: 3;
+}
+
+.card-l-center {
+    left: 50%;
+    transform: translateX(-50%) scale(1.05);
+    opacity: 1;
+    z-index: 3;
+}
+
+.card-right {
+    left: 100%;
+    transform: translateX(-100%) scale(0.9);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.card-out-l {
+    left: -100%;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.card-out-r {
+    left: 200%;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.card-new-l {
+    left: -100%;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.card-new-r {
+    left: 200%;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.2rem;
+    background-color: transparent;
+    border: none;
+    color: #1e2b40;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+    .nav-btn:hover {
+        color: #212f45;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+.left-btn {
+    left: 0px;
+}
+
+.right-btn {
+    right: 0px;
+}
+
+/* 手機版只顯示中間卡 */
+@media (max-width: 500px) {
+    .card-left,
+    .card-right {
+        display: none;
+    }
+
+    .card-center {
+        left: 50%;
+        transform: translateX(-50%) scale(1.0);
+    }
+
+    .card-r-center,
+    .card-l-center {
+        left: 50%;
+        transform: translateX(-50%) scale(1.0);
+    }
+}
+
+/* 卡片翻轉效果 */
+/* ✅ 加上這段來支援 card 寬度與置中 */
+.row > .flip-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.flip-card {
+    width: 100%;
+    max-width: 340px; /* 自訂最大寬度可加可不加 */
+}
+
+/* 卡片本體 */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    perspective: 1000px;
+    cursor: pointer;
+}
+    .flip-card:hover {
+        transform: scale(1.05);
+        z-index: 10;
+    }
+
+
+/* 內部翻轉層 */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 正方形 */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* 滑過時翻轉 */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: background 0.4s ease-in-out;
+    background: linear-gradient(145deg, #293a57, #1e2b40);
+    color: #ffffff;
+    backdrop-filter: blur(6px);
+}
+
+/*.flip-card-front,
+.flip-card-back {
+    background-color: #1e2b40;
+    color: white;
+    display: flex;
+}
+*/
+/* ====== 正面設計強化 ====== */
+/*.flip-card-front {
+    background: linear-gradient(145deg, #1e2b40, #293a57);
+    position: relative;
+}
+*/
+    /* 裝飾圓形（右上角） */
+    .flip-card-front::before {
+        content: '';
+        position: absolute;
+        top: -400px;
+        right: -400px;
+        width: 650px;
+        height: 650px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+        z-index: 0;
+    }
+    /* 反光效果遮罩 */
+    /*120deg 控制光線傾斜角度（越大越斜）
+    rgba(255,255,255,0.3) 控制光線亮度
+    animation: 5s linear infinite 每 5 秒播放一次，可改為 8s 更柔和
+    rotate(25deg) 必須和 gradient 角度搭配，確保掃過角度一致
+    */
+    .flip-card-front::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -75%;
+        width: 150%;
+        height: 150%;
+        background: linear-gradient(
+        /*45deg,*/ /* ← 由左下刷向右上 */
+        315deg, /* ↖ 右下到左上 */
+        rgba(255, 255, 255, 0) 37%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 75% );
+        transform: rotate(0deg);
+        animation: shineEffect 5s linear infinite;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    /* 前景內容讓裝飾不干擾文字 */
+    .flip-card-front > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .flip-card-front h5 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+
+    .flip-card-front p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        opacity: 0.9;
+        margin: 0;
+    }
+
+
+.flip-card-back {
+    background: #ff9966;
+    transform: rotateY(180deg);
+}
+
+/*Flip-front反光效果*/
+@keyframes shineEffect {
+    0% {
+        /*transform: translateX(-100%);*/
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        /*transform: translateX(100%);*/
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        /*transform: translateX(100%);*/
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/*自動翻轉特效*/
+@keyframes subtleFlip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(50deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.auto-tilt {
+    animation: subtleFlip 0.8s ease-in-out;
+}
+
+/* 手機版 */
+@media (max-width: 768px) {
+    .flip-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .flip-card {
+        flex: 0 0 auto;
+        width: 150px;
+    }
+
+        .flip-card:hover .flip-card-inner {
+            transform: none; /* 禁止 hover 翻轉 */
+        }
+
+        .flip-card.clicked .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+}

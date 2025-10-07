@@ -1,0 +1,51 @@
+//
+// home.scss
+//
+
+@mixin home-common {
+    background-size: cover !important;
+    align-self: center;
+    position: relative;
+    background-position: center center;
+}
+.bg-half-260 {
+    padding: 260px 0;    
+    @include home-common();
+}
+.bg-half-170 {
+    padding: 170px 0;    
+    @include home-common();
+}
+.bg-half {
+    padding: 130px 0;
+    @include home-common();
+}
+
+//index.html
+.home-one {
+    border: 1.5px solid $white;
+    .box {
+        background-color: rgba($white, 0.8);
+    }
+}
+
+// index-boxed.html
+#sThemes-layout {
+    .sThemesbox {
+        background: $white;
+        box-shadow: $shadow;
+        max-width: 1170px;
+        margin: 0 auto;
+        .boxed-home {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .bg-half-170, .bg-half-260 {        
+        padding: 150px 0;
+        height: auto;
+    } 
+}

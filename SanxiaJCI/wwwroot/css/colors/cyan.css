@@ -1,0 +1,106 @@
+.bg-primary,
+.btn-primary,
+.btn-outline-primary:hover, 
+.btn-outline-primary:focus, 
+.btn-outline-primary:active, 
+.btn-outline-primary.active, 
+.btn-outline-primary.focus, 
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.pagination .active a,
+.badge-primary,
+#preloader #status .sk-chase .sk-chase-dot:before,
+.social-icon li a:hover,
+.back-to-top:hover, 
+.back-to-top:focus,
+#topnav .navbar-toggle.open span:hover,
+.portfolioFilter li a:hover, .portfolioFilter li a.active,
+.portfolio-box .portfolio-box-img .overlay-work .work-content .work-icon:hover,
+.tns-nav button.tns-nav-active,
+.sidebar .widget .tagcloud > a:hover,
+.portfolio.portfolio-modern .work-icon i:hover {
+    background-color: #66ccff !important;
+}
+
+.text-primary,
+.btn-outline-primary,
+.page-next-level .page-next li a:hover,
+.faq-content .card a.faq[data-toggle=collapse],
+.pagination li a:hover,
+.badge-outline-primary,
+#topnav .has-submenu.active .submenu li.active > a,
+#topnav .navigation-menu > li > a:hover, #topnav .navigation-menu > li > a:active,
+#topnav .navigation-menu > li:hover > a,
+#topnav .navigation-menu > li.active > a,
+#topnav.scroll .navigation-menu > li:hover > a, #topnav.scroll .navigation-menu > li.active > a,
+#topnav .navigation-menu > li .submenu li a:hover,
+#topnav .navigation-menu > li > a:hover,
+#topnav .navigation-menu > li .submenu li a:hover,
+#topnav .navigation-menu > li.has-submenu.open > a,
+#topnav .has-submenu.active a,
+.portfolio-box .portfolio-box-img .overlay-work .work-content .work-style-three .title:hover,
+.portfolio-box .gallary-title .title:hover,
+.feature .content a:hover,
+.testimonial:hover .review .base,
+.team-content .detail .name:hover,
+.blog-post .content .title:hover,
+.blog-post .content a:hover,
+.sidebar .widget .post-recent .post-recent-content a:hover,
+.media-list .comment-desk a:hover,
+.portfolioFilter span:hover, .portfolioFilter span.active,
+.portfolio.portfolio-modern .content .title:hover,
+.portfolio.portfolio-modern .work-icon i,
+.portfolio.portfolio-grid .content .title:hover,
+.portfolio.portfolio-classic .content .title:hover {
+    color: #66ccff !important;
+}
+
+.btn-primary,
+.btn-outline-primary,
+.btn-outline-primary:hover, 
+.btn-outline-primary:focus, 
+.btn-outline-primary:active, 
+.btn-outline-primary.active, 
+.btn-outline-primary.focus, 
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.pagination .active a,
+.badge-outline-primary,
+.form-group .form-control:focus, 
+.form-group .form-control.active,
+.social-icon li a:hover,
+#topnav .has-submenu.active.active .menu-arrow,
+#topnav.scroll .navigation-menu > li:hover > .menu-arrow, #topnav.scroll .navigation-menu > li.active > .menu-arrow,
+#topnav .navigation-menu > li:hover > .menu-arrow {
+    border-color: #66ccff !important;
+}
+
+a.text-primary:hover,
+.home-shape-arrow:hover .arrow-icon {
+    color: #33bbff !important;
+}
+
+.btn-primary,
+.btn-outline-primary:hover, 
+.btn-outline-primary:focus, 
+.btn-outline-primary:active, 
+.btn-outline-primary.active, 
+.btn-outline-primary.focus, 
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+    box-shadow: 0 3px 7px rgba(102, 204, 255, 0.5) !important;
+}
+
+.watch-video a .play-icon-circle.home-play-2 {
+    box-shadow: 0 0 45px rgba(102, 204, 255, 0.9) !important;
+}
+  
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.btn-primary.focus {
+    background-color: #33bbff !important;
+    border-color: #33bbff !important;
+}
+
+.tns-nav button {
+    background: rgba(102, 204, 255, 0.4) !important;
+}

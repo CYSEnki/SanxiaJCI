@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\SanxiaJCI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\users\\user\\desktop\\sanxiajci\\sanxiajci\\views\\businessmarket\\game.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\businessmarket\\game.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\users\\user\\desktop\\sanxiajci\\sanxiajci\\wwwroot\\js\\dify\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\js\\dify\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\users\\user\\desktop\\sanxiajci\\sanxiajci\\controllers\\businessmarketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\controllers\\businessmarketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\users\\user\\desktop\\sanxiajci\\sanxiajci\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\users\\user\\desktop\\sanxiajci\\sanxiajci\\wwwroot\\js\\quiz.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\js\\quiz.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chat.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
+              "ViewState": "AgIAADoAAAAAAAAAAAAtwEYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-25T16:12:24.92Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
+              "RelativeToolTip": "SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
+              "ViewState": "AgIAAMsBAAAAAAAAAAArwNwBAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-25T16:02:29.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Chat.css",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\Chat.css",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\Chat.css",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\Chat.css",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\Chat.css",
+              "ViewState": "AgIAAL4BAAAAAAAAAAAQwLYBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-25T16:25:35.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "quiz.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\quiz.js",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\js\\quiz.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\quiz.js",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\js\\quiz.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-25T18:25:03.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BusinessMarketController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\Controllers\\BusinessMarketController.cs",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Controllers\\BusinessMarketController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SanxiaJCI\\SanxiaJCI\\Controllers\\BusinessMarketController.cs",
+              "RelativeToolTip": "SanxiaJCI\\Controllers\\BusinessMarketController.cs",
+              "ViewState": "AgIAAHQBAAAAAAAAAAAowJYBAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T20:24:22.668Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

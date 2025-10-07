@@ -1,0 +1,164 @@
+//
+// menu.scss
+//
+#topnav {
+    .logo {
+        color: $dark !important;
+        .l-dark,
+        .logo-light-mode {
+            display: none !important;
+        }
+        .l-light,
+        .logo-dark-mode {
+            display: inline-block !important;
+        }
+    }
+    .has-submenu {
+        &.active {
+            a {
+                color: $white;
+            }
+        }
+    }
+    .has-submenu{
+        .submenu {
+            .submenu-arrow {
+                border-color: $dark;
+            }
+        }
+    }
+    .navbar-toggle {
+        span {
+            background-color: $dark;
+        }
+    }
+    .navigation-menu {
+        > li {
+            > a {
+                color: $dark;
+            }
+            .submenu {
+                &.megamenu {
+                    li {
+                        .megamenu-head {
+                            color: $dark !important;
+                        }
+                    }
+                }
+            }
+        }
+        .has-submenu {
+            .menu-arrow {
+                border-color: $dark;
+            }
+        }
+    }
+    &.scroll {
+        background-color: $white;
+        box-shadow: $shadow;
+        .navigation-menu {
+            > li {
+                > a{
+                    color: $dark;
+                }
+                
+                > .menu-arrow {
+                    border-color: $dark;
+                }
+            } 
+        }
+    }
+    
+    &.nav-sticky{
+        background: $white;
+        box-shadow: $shadow;
+    }
+}
+@media (min-width: 992px) {
+    #topnav {
+        .navigation-menu {
+            > .has-submenu {
+                > .submenu {
+                    > .has-submenu {
+                        > .submenu {
+                            &::before{
+                                box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.15);
+                                border-color: transparent $white $white transparent;
+                            }
+                        }
+                    } 
+                }
+            } 
+            > li {
+                .submenu {
+                    background-color: $white;
+                    box-shadow: $shadow;
+                    &:before {
+                        border: 7px solid $gray-700;
+                        border-color: transparent transparent $white $white !important;
+                        box-shadow: -2px 2px 2px -1px rgba(255, 255, 255, 0.15);
+                    }
+                    &.megamenu {
+                        > li {
+                            > ul {
+                                > li {
+                                    > span {
+                                        color: $muted;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .submenu {
+                    li {
+                        a {
+                            color: $dark !important;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}
+  
+@media (max-width: 991px) {
+    #topnav {
+        background-color: $white;
+        box-shadow: $shadow;
+        .navigation-menu {
+            > li {
+                .submenu {
+                    li {
+                        a {
+                            color: $dark;
+                        }
+                    }
+                    &.megamenu {
+                        > li {
+                            > ul {
+                                > li {
+                                    > span {
+                                        color: $muted;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                > a {
+                    color: $dark;
+                }
+            }
+        }
+        .menu-extras .menu-item {
+            border-color: $muted;
+        }
+    }
+
+    #navigation {
+        border-top: 1px solid darken($light,2%);
+        border-bottom: 1px solid darken($light,2%);
+        background-color: $white;
+    }
+}

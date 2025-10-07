@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "聯絡我們";
+}
+<!-- Start Contact -->
+<section class="section pt-5 mt-4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.7185106440065!2d121.36815077539349!3d24.941657542003654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681be088661757%3A0xfd26ed2bde1bc76b!2zMjM35paw5YyX5biC5LiJ5bO95Y2A5ZyL6Zqb5LiA6KGXOTbomZ8!5e0!3m2!1szh-TW!2stw!4v1750836130215!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+
+    <div class="container mt-100 mt-60">
+        <div class="row align-items-center">
+            <!-- 表單 -->
+            <div class="col-lg-5 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0 order-2 order-md-1">
+                <div class="custom-form p-4 rounded shadow position-relative">
+                    <div id="form-overlay" class="position-absolute top-0 start-0 w-100 h-100 bg-white bg-opacity-75 d-none justify-content-center align-items-center z-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">處理中...</span>
+                        </div>
+                    </div>
+                    <form id="contact-form" method="post" onsubmit="return validateForm()">
+                        <p id="error-msg" class="text-danger"></p>
+                        <div id="simple-msg"></div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">您的姓名 <span class="text-danger">*</span></label>
+                                <input name="name" id="name" type="text" class="form-control" placeholder="姓名">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">電子郵件 <span class="text-danger">*</span></label>
+                                <input name="email" id="email" type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label">職業</label>
+                                <input name="subject" id="subject" type="text" class="form-control" placeholder="職業">
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label">信件內容 <span class="text-danger">*</span></label>
+                                <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="請輸入內容"></textarea>
+                            </div>
+                            <div class="col-12 d-grid">
+                                <button type="submit" class="btn btn-primary">寄送郵件</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-7 col-md-6 order-1 order-md-2">
+                <div class="title-heading ms-lg-4">
+                    <h4 class="mb-4">聯絡我們</h4>
+                    <p class="text-muted">加入三峽國際青年商會，與我們一同推動地方創生與青年影響力。我們致力於打造具行動力與社會責任感的青年平台，歡迎與我們聯繫！</p>
+                    <div class="contact-detail mt-3">
+                        <div class="icon mt-3 float-start">
+                            <i class="mdi mdi-email-variant text-primary mdi-36px me-3"></i>
+                        </div>
+                        <div class="content mt-3 overflow-hidden d-block">
+                            <h5 class="mb-0">電子郵件</h5>
+                            <a href="mailto:ray210160@gmail.com">ray210160@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail mt-3">
+                        <div class="icon mt-3 float-start">
+                            <i class="mdi mdi-phone text-primary mdi-36px me-3"></i>
+                        </div>
+                        <div class="content mt-3 overflow-hidden d-block">
+                            <h5 class="mb-0">連絡電話</h5>
+                            <a href="tel:0903158257" class="text-muted">
+                                0903 158 257
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail mt-3">
+                        <div class="icon mt-3 float-start">
+                            <i class="mdi mdi-map-marker-outline text-primary mdi-36px me-3"></i>
+                        </div>
+                        <div class="content mt-3 overflow-hidden d-block">
+                            <h5 class="mb-0">地址</h5>
+                            <a href="javascript:void(0)" class="text-muted">
+                                237新北市三峽區國際一街96號16樓之3
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End contact -->
+
+@section scripts{
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+            function validateForm() {
+            const name = $('#name').val().trim();
+            const email = $('#email').val().trim();
+            const subject = $('#subject').val().trim();
+            const comments = $('#comments').val().trim();
+
+            $('#error-msg').html('');
+            $('#simple-msg').html('');
+
+            if (!name || !email || !comments) {
+                $('#error-msg').html("請完整填寫必填欄位！");
+                return false;
+            }
+
+            $('#form-overlay').removeClass('d-none').addClass('d-flex');
+
+            $.ajax({
+                type: "POST",
+                url: "/Home/SendEmail",
+                contentType: "application/json",
+                data: JSON.stringify({ name, email, subject, message: comments }),
+                success: function (res) {
+                    $('#form-overlay').removeClass('d-flex').addClass('d-none');
+                    $('#simple-msg').html(`<div class="alert alert-success">${res.message || "郵件寄送成功！"}</div>`);
+                    $('#contact-form')[0].reset();
+                },
+                error: function (err) {
+                    $('#form-overlay').removeClass('d-flex').addClass('d-none');
+                    $('#simple-msg').html(`<div class="alert alert-danger">郵件寄送失敗：${err.responseJSON?.message || "請稍後再試。"}</div>`);
+                }
+            });
+
+            return false;
+        }
+    </script>
+
+}

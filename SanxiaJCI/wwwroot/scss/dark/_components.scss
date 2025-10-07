@@ -1,0 +1,354 @@
+//
+// components.scss
+//
+
+//component-wrapper
+.component-wrapper {
+    .title {
+        font-size: 24px;
+    }
+}
+
+//Buttons
+@each $name,
+$value in $colors {
+    .btn-#{$name} {
+        background-color: #{$value} !important;
+        border: 1px solid #{$value} !important;
+        color: $dark !important;
+        box-shadow: 0 3px 7px rgba($value, 0.5);
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($value, 10%) !important;
+            border-color: darken($value, 10%) !important;
+            color: $dark !important;
+            transform: translateY(-2px);
+        }
+    }
+
+    .btn-outline-#{$name} {
+        border: 1px solid #{$value};
+        color: #{$value};
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus, &:not(:disabled):not(.disabled):active{
+            background-color: #{$value};
+            border-color: #{$value};
+            color: $dark;
+            box-shadow: 0 3px 7px rgba($value, 0.5);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.btn {
+    &.btn-dark {
+        color: $white !important;
+        background: $dark;
+        border: 1px solid $gray-100 !important;
+        &:hover, &:focus, &:active, &.active, &.focus {
+            background-color: darken($dark, 5%) !important;
+            color: $white !important; 
+        }
+    }    
+    &.btn-outline-dark {
+        border: 1px solid $gray-100 !important;
+        color: $dark !important;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus {
+            background-color: $dark !important;
+            color: $white !important;
+        }
+    }
+    &.btn-light {
+        color: $dark !important;
+        border-color: darken($gray-200, 15%) !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: lighten($light, 10%) !important;
+            color: $dark !important;
+        }
+    }    
+    &.btn-outline-light {
+        border-color: darken($gray-200, 15%) !important;
+        color: $dark !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: lighten($light, 10%) !important;
+            color: $dark !important;
+        }
+    }
+}
+
+button:not(:disabled) {
+    outline: none;
+}
+
+//Shadow 
+.shadow {
+    box-shadow: $shadow !important;
+}
+
+//Border
+.border {
+    border: 1px solid $gray-100 !important;
+}
+.border-top {
+    border-top: 1px solid $gray-100 !important;    
+}
+.border-bottom {
+    border-bottom: 1px solid $gray-100 !important;    
+}
+.border-left {
+    border-left: 1px solid $gray-100 !important;    
+}
+.border-right {
+    border-right: 1px solid $gray-100 !important;    
+}
+
+//Breadcrumb
+.page-next-level{
+    .page-next {
+        letter-spacing: 0.5px;
+        li {
+            &:after,
+            &:before {
+                color: $dark !important; 
+            }     
+        }
+    }
+}
+
+.faq-content {
+    .card {
+        a.faq[data-toggle=collapse]{
+            background-color: $white;
+            &:before {
+                color: $dark;
+            }
+            &.collapsed {
+                background-color: $white;
+                color: $dark;
+            }
+        }
+    }
+}
+
+///Pagination
+.pagination {
+    li {
+        a {
+            color: $dark;
+            border: 1px solid $gray-100;
+            background: $white; 
+            &:hover {
+                background: $gray-100;
+                border-color: $gray-100;
+            }
+        }
+    }              
+    .active a {
+        color: $white !important;
+    }
+}
+
+//Processbar
+.progress-box {
+    .progress {
+        background: $light;
+    }
+}
+.progress-bar-striped {
+    background-image: linear-gradient(45deg,rgba(0,0,0,.15) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.15) 50%,rgba(0,0,0,.15) 75%,transparent 75%,transparent);
+}
+
+//Badges
+@each $name,
+$value in $colors {
+    .badge-#{$name} {
+        background-color: #{$value} !important;
+        color: $dark !important;
+    }
+
+    .badge-outline-#{$name} {
+        color: #{$value} !important;
+        border: 1px solid #{$value} !important;
+    }
+}
+.badge {
+    &.badge-light {
+        color: $dark !important;
+        background-color: $light !important;
+    }
+    &.badge-outline-light {
+        color: $dark !important;
+        border: 1px solid darken($light, 20%) !important;
+    }
+}
+
+//Form
+.form-group {
+    .form-control {
+        border: 2px solid $gray-100;
+    } 
+}
+
+// Loader
+#preloader {
+    background-image: linear-gradient(45deg, $white, $white);
+}
+
+//Social icons
+.social-icon {
+    li {
+        a {
+            color: $dark;
+            border: 1px solid $dark;
+            &:hover {
+                color: $dark !important;
+            }
+        }
+    }
+    &.social {
+        li {
+            a {
+                color: $gray-300;
+                border-color: $gray-300;
+            }
+        }
+    }
+}
+
+//back to top
+.back-to-top {
+    background-color: $light;
+    &:hover, &:focus {
+        i {
+            color: $dark !important;
+        }
+    }
+}
+
+//
+// blog.scss
+//
+.blog-post {
+    &:hover {
+        box-shadow: $shadow;
+    }
+}
+
+
+//Sidebar
+.sidebar {
+    .widget {
+        .post-recent {
+            .post-recent-content {
+                a {
+                    color: $dark;
+                }
+            }
+        }
+        .tagcloud {
+            > a {
+                background: $gray-100;
+                color: $dark;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.media-list {
+    .sub-comment {
+        border-left: 2px dashed $gray-300;
+    }
+}
+
+
+//
+// footer.scss
+//
+.footer {
+    .copy-rights {
+        color: $gray-300;
+    }
+    &.footer-bar {
+        border-top: 1px solid lighten($footer, 5%);
+    }
+}
+
+//
+// home.scss
+//
+
+.home-one {
+    border: 1.5px solid $white;
+    .box {
+        background-color: rgba($white, 0.8);
+    }
+}
+
+// index-boxed.html
+#sThemes-layout {
+    .sThemesbox {
+        background: $white;
+        box-shadow: $shadow;
+    }
+}
+
+//
+// team.scss
+//
+.team-content {
+    &:hover {            
+        box-shadow: $shadow;
+    }
+}
+
+//
+// testi.scss
+//
+.testimonial {
+    .review {
+        &.arrow-bottom {
+            &:after {
+                border-top-color: darken($light, 2%);
+            }
+        }
+    }
+}
+//
+// work.scss
+//
+.portfolioFilter {
+    li {
+        a {
+            &:hover, &.active {
+                color: $dark !important;
+            }
+        }
+    }
+}
+
+.portfolio-box {
+    .portfolio-box-img {
+        .overlay-work {
+            background-color: rgba($white, 0.7);
+            .work-content {
+                .work-icon {
+                    &:hover {
+                        color: $dark !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.portfolio{
+    &.portfolio-grid{
+        .overlay-work{
+            background-color: $light !important;
+        }
+    }
+    
+}

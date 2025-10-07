@@ -1,0 +1,26 @@
+﻿
+<div id="navigation">
+    <ul class="navigation-menu">
+        <li><a asp-controller="Home" asp-action="Contact" class="sub-menu-item"></a></li>
+        <li><a asp-controller="Home" asp-action="Index" class="sub-menu-item">峽青領航</a></li>
+        <li><a asp-controller="home" asp-action="about" class="sub-menu-item">關於青商</a></li>
+        <li class="has-submenu parent-menu-item">
+            <a href="javascript:void(0)">商業聯誼市集</a><span class="menu-arrow"></span>
+            <ul class="submenu">
+                <li><a asp-controller="BusinessMarket" asp-action="Index" class="sub-menu-item">展會資訊</a></li>
+                @* <li><a asp-controller="BusinessMarket" asp-action="Partner" class="sub-menu-item">新北市青年局</a></li> *@
+                @* <li><a asp-controller="BusinessMarket" asp-action="Local" class="sub-menu-item">在地創生</a></li> *@
+                <li><a asp-controller="BusinessMarket" asp-action="Market" class="sub-menu-item">商業市集</a></li>
+                <li><a asp-controller="BusinessMarket" asp-action="Game" class="sub-menu-item">創業遊戲</a></li>
+                <li><a asp-controller="BusinessMarket" asp-action="Stage" class="sub-menu-item">交通資訊</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu parent-menu-item">
+            <a href="javascript:void(0)">商會活動實記</a><span class="menu-arrow"></span>
+            <ul class="submenu">
+                <li><a asp-controller="Meeting" asp-action="International" class="sub-menu-item">國際交流實務-中韓</a></li>
+            </ul>
+        </li>
+        <li><a asp-controller="Home" asp-action="Contact" class="sub-menu-item">聯絡我們</a></li>
+    </ul><!-- end navigation menu -->
+</div>

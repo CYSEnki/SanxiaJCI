@@ -1,0 +1,72 @@
+﻿body {
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+}
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.aos-animate.fade-up,
+.aos-animate.fade-left {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.aos-animate.fade-left {
+    transform: translateX(0);
+}
+
+@media (max-width: 996px) {
+    .hero-background {
+        background-image: url('/images/sanxiajci/mobileback_about.png') !important; /* 換成手機背景圖 */
+        background-position: left calc(0% + 30px) !important;
+        background-size: cover !important;
+    }
+
+    /* 所有標題字往下縮小一級 */
+    h1 {
+        font-size: 2rem;
+    }
+    /* 原本大標縮小 */
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    /* 文字區塊也可跟著微調字體 */
+    p, .para-desc {
+        font-size: 0.95rem;
+    }
+
+    /* 可選：按鈕縮小、間距緊縮 */
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .mt-4 {
+        margin-top: 1rem !important;
+    }
+}

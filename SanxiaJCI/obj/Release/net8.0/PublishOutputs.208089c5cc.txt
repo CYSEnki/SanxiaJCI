@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\SanxiaJCI.exe
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\appsettings.Development.json
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\appsettings.json
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\SanxiaJCI.dll
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\SanxiaJCI.deps.json
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\SanxiaJCI.runtimeconfig.json
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\SanxiaJCI.pdb
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\BouncyCastle.Cryptography.dll
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\MailKit.dll
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\MimeKit.dll
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\System.Security.Cryptography.Pkcs.dll
+C:\Users\user\Desktop\SanxiaJCI\SanxiaJCI\out\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

@@ -1,0 +1,1 @@
+docker build -t myapp-image . && docker tag myapp-image asia-east1-docker.pkg.dev/sanxiajci/my-repo/myapp-image && docker push asia-east1-docker.pkg.dev/sanxiajci/my-repo/myapp-image && gcloud run deploy sanxiajci-web --image asia-east1-docker.pkg.dev/sanxiajci/my-repo/myapp-image --platform managed --region asia-east1 --allow-unauthenticated --port 8080

@@ -1,0 +1,207 @@
+//
+// components.scss
+//
+//Border
+.border-left {
+    border-right: 1px solid $gray-200 !important;    
+    border-left: none !important;    
+}
+.border-right {
+    border-left: 1px solid $gray-200 !important;    
+    border-right: none !important;    
+}
+
+//Breadcrumb
+.page-next-level{
+    .page-next {
+        li {
+            margin-left: 5px !important;
+            margin-right: auto;
+            &:before {
+                content: "\F0141";
+                font-family: 'Material Design Icons';
+                color: $dark !important; 
+            }   
+            &:after {
+                display: none;
+            }   
+            &:last-child {
+                &:before {
+                    display: none;
+                }
+            }          
+            a, span {        
+                padding-left: 8px !important;           
+                padding-right: auto;
+            }
+            a {
+                &:hover {
+                    color: $primary !important;
+                }
+            }
+            span {
+                &:last-child {
+                    padding-left: 0px !important;
+                    padding-right: auto;
+                }
+            }
+        }
+    }
+}
+
+//FAQ
+.faq-content {
+    .card {
+        .faq {           
+            .card-header {
+                padding-left: 40px !important;
+                padding-right: auto;
+            }
+        }  
+        a.faq[data-toggle=collapse]{
+            &:before {
+                left: 20px !important;
+                right: auto;
+            }
+        }
+    }
+}
+
+///Pagination
+.pagination {
+    li {
+        &:first-child a {
+            border-right-width: 1px !important;
+            border-left-width: auto !important;
+        } 
+        &:last-child a{
+            border-radius: 0 0 7px 7px !important;
+        }
+        a {
+            float: right !important;
+            border-right-width: 0 !important;
+            border-left-width: auto;
+        }
+    }              
+}
+
+//Processbar
+.progress-box {
+    .progress {
+        .progress-value {
+            left: -15px !important;
+            right: auto;
+        }
+    }
+}
+
+// Loader
+#preloader {
+    #status {
+        .sk-chase {
+            .sk-chase-dot {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+}
+
+//back to top
+.back-to-top {
+    left: 20px !important;
+    right: auto;
+}
+
+//Home Shape
+.home-shape-arrow {
+    right: 0 !important;
+    left: auto;
+}
+
+//
+// blog.scss
+//
+.sidebar {
+    .widget {
+        .widget-search, .searchform { 
+            input[type="text"] {
+                padding-left: 45px !important;
+                padding-right: auto;
+            }
+            input[type="submit"] {
+                right: 10px;
+            }
+        }
+        .widget-search {
+            .searchform {
+                &:after {
+                    left: 16px !important;
+                    right: auto;
+                }
+            }
+        }
+        .post-recent {
+            .post-recent-content {
+                padding-right: 10px !important;
+                padding-left: auto;
+            }
+        }
+        .tagcloud {
+            > a {
+                margin: 5px 0 5px 10px;
+            }
+        }
+        .widget-grid {
+            .item {
+                float: right !important;
+                a {
+                    img {
+                        right: 0 !important;
+                        left: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.media-list {
+    .sub-comment {
+        border-right: 2px dashed $gray-300 !important;
+        border-left: none !important;
+    }
+}
+
+//
+// team.scss
+//
+.team-content {
+    .team-social {
+        right: 10px !important;
+        left: auto;
+    }
+}
+
+//Testimonial
+.tns-inner, .tns-nav {
+    direction: ltr;
+}
+
+.tns-visually-hidden {
+    left: 0 !important;
+    visibility: hidden;
+}
+
+#style-switcher {
+    .bottom {
+        a {
+            &.settings {
+                padding-right: 10px;
+                i {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}
