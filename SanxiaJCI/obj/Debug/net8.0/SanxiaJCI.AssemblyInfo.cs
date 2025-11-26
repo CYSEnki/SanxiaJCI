@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SanxiaJCI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ec2b0aaf748c7118f3eaa993cc1ffb0dfb8179a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SanxiaJCI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SanxiaJCI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
