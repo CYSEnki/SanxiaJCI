@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "D:\\Source\\SanxiaJCI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\js\\dify\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\js\\dify\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\views\\businessmarket\\introduction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\businessmarket\\introduction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\css\\introduction.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\introduction.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\controllers\\businessmarketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\controllers\\businessmarketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\views\\businessmarket\\game.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\businessmarket\\game.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\js\\dify\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\js\\dify\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -33,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\views\\businessmarket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\businessmarket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\js\\quiz.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -50,24 +62,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Program.cs",
               "RelativeDocumentMoniker": "SanxiaJCI\\Program.cs",
               "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Program.cs",
               "RelativeToolTip": "SanxiaJCI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-02T07:32:39.981Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\appsettings.json",
               "RelativeDocumentMoniker": "SanxiaJCI\\appsettings.json",
@@ -80,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Chat.js",
               "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
               "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
@@ -89,12 +101,76 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-25T16:12:24.92Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Chat.css",
+              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\Chat.css",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\Chat.css",
+              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\Chat.css",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\Chat.css",
+              "ViewState": "AgIAAJUBAAAAAAAAAAAAALQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-25T16:25:35.222Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Game.cshtml",
+              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
+              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
+              "RelativeToolTip": "SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
+              "ViewState": "AgIAAIUBAAAAAAAAAAAAAHYAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-25T16:02:29.373Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "introduction.cshtml",
+              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\introduction.cshtml",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\BusinessMarket\\introduction.cshtml",
+              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\introduction.cshtml",
+              "RelativeToolTip": "SanxiaJCI\\Views\\BusinessMarket\\introduction.cshtml",
+              "ViewState": "AgIAAGYCAAAAAAAAAAAAAIcCAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T19:19:55.543Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "introduction.css",
+              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\introduction.css",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\introduction.css",
+              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\introduction.css",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\introduction.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-28T19:24:15.309Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MeetingController.cs",
+              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\MeetingController.cs",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Controllers\\MeetingController.cs",
+              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\MeetingController.cs",
+              "RelativeToolTip": "SanxiaJCI\\Controllers\\MeetingController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T16:57:47.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Index.cshtml",
               "RelativeDocumentMoniker": "SanxiaJCI\\Views\\BusinessMarket\\Index.cshtml",
@@ -106,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "SanxiaJCI\\Controllers\\HomeController.cs",
@@ -118,43 +194,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Game.cshtml",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
-              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
-              "RelativeToolTip": "SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
-              "ViewState": "AgIAAPkAAAAAAAAAAAAAANkBAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:02:29.373Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Chat.css",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\Chat.css",
-              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\Chat.css",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\Chat.css",
-              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\Chat.css",
-              "ViewState": "AgIAAJUBAAAAAAAAAAAAALQBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-25T16:25:35.222Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "BusinessMarketController.cs",
               "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\BusinessMarketController.cs",
               "RelativeDocumentMoniker": "SanxiaJCI\\Controllers\\BusinessMarketController.cs",
               "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\BusinessMarketController.cs",
               "RelativeToolTip": "SanxiaJCI\\Controllers\\BusinessMarketController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwLMBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T20:24:22.668Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "About.cshtml",
               "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "SanxiaJCI\\Views\\Home\\About.cshtml",
@@ -166,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "quiz.js",
               "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\quiz.js",
               "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\js\\quiz.js",

@@ -1,0 +1,758 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三峽國際青年商會｜商業交流委員會</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="~/css/introduction.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ========== Slide 1: Cover ========== -->
+    <section class="slide slide--cover">
+        <div class="slide-inner">
+            <div class="cover__badge">
+                <svg viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="45" stroke="white" stroke-width="3" />
+                    <text x="50" y="58" text-anchor="middle" fill="white" font-size="22" font-weight="bold">JCI</text>
+                </svg>
+                <span>JUNIOR CHAMBER INTERNATIONAL</span>
+            </div>
+            <h1 class="cover__title">三峽國際青年商會<br>商業交流委員會</h1>
+            <p class="cover__subtitle">給新會友與未來商業交流主委的說明</p>
+            <div class="cover__meta">
+                <div class="cover__meta-item">
+                    <div class="cover__meta-label">2025 商業交流主委</div>
+                    <div class="cover__meta-value">交接與經驗傳承</div>
+                </div>
+                <div class="cover__meta-item">
+                    <div class="cover__meta-label">2026 理事</div>
+                    <div class="cover__meta-value">未來方向規劃</div>
+                </div>
+                <div class="cover__meta-item">
+                    <div class="cover__meta-label">策劃人</div>
+                    <div class="cover__meta-value">蘇家潁 理事</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 14: 會員名錄 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number"></span>
+                <h2 class="slide__title">會員名錄與分會商業生態</h2>
+            </div>
+
+            <div class="stats-row">
+                <div class="stats-box">
+                    <div class="stats-box__number">30</div>
+                    <div class="stats-box__label">位現任會員</div>
+                    <div class="stats-box__sub">
+                        <div class="stats-box__sub-num">10+</div>
+                        <div class="stats-box__sub-label">產業類別</div>
+                    </div>
+                </div>
+                <div class="industry-grid">
+                    <div class="industry-tag" onclick="openModal('餐飲')">
+                        <div class="industry-tag__count">5</div>
+                        <div class="industry-tag__name">餐飲業</div>
+                    </div>
+                    <div class="industry-tag" onclick="openModal('金融保險')">
+                        <div class="industry-tag__count">3</div>
+                        <div class="industry-tag__name">金融保險</div>
+                    </div>
+                    <div class="industry-tag" onclick="openModal('專業服務')">
+                        <div class="industry-tag__count">5</div>
+                        <div class="industry-tag__name">專業服務</div>
+                    </div>
+                    <div class="industry-tag" onclick="openModal('製造工程')">
+                        <div class="industry-tag__count">3</div>
+                        <div class="industry-tag__name">製造/工程</div>
+                    </div>
+                    <div class="industry-tag" onclick="openModal('零售')">
+                        <div class="industry-tag__count">5</div>
+                        <div class="industry-tag__name">零售百貨</div>
+                    </div>
+                    <div class="industry-tag" onclick="openModal('公職')">
+                        <div class="industry-tag__count">2</div>
+                        <div class="industry-tag__name">公職/政治</div>
+                    </div>
+                    <div class="industry-tag" onclick="openModal('科技')">
+                        <div class="industry-tag__count">1</div>
+                        <div class="industry-tag__name">科技業</div>
+                    </div>
+                    <div class="industry-tag" onclick="openModal('媒體')">
+                        <div class="industry-tag__count">2</div>
+                        <div class="industry-tag__name">媒體影音</div>
+                    </div>
+                    <div class="industry-tag" onclick="openModal('美容')">
+                        <div class="industry-tag__count">1</div>
+                        <div class="industry-tag__name">美容SPA</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-btns">
+                <button class="quick-btn" onclick="openModal('幹部')">
+                    <span class="quick-btn__icon">👔</span>
+                    <span>幹部團隊</span>
+                </button>
+                <button class="quick-btn" onclick="openModal('理監事')">
+                    <span class="quick-btn__icon">⭐</span>
+                    <span>理監事會</span>
+                </button>
+                <button class="quick-btn" onclick="openModal('會員')">
+                    <span class="quick-btn__icon">👥</span>
+                    <span>一般會員</span>
+                </button>
+                <button class="quick-btn" onclick="openModal('all')">
+                    <span class="quick-btn__icon">📋</span>
+                    <span>全部名單</span>
+                </button>
+            </div>
+
+            <div class="info-section" style="margin-top: 24px;">
+                <h3 class="info-section__title">名錄的價值與任務</h3>
+                <ul class="info-list">
+                    <li>讓新會友快速認識「這個分會有誰、會什麼」</li>
+                    <li>提供商業媒合與合作時的查詢工具</li>
+                    <li>商業交流委員會任務：持續更新維護，讓名錄從「紙上資訊」變成「真正合作」</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 2: 商業交流委員會介紹 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">01</span>
+                <h2 class="slide__title">商業交流委員會是做什麼的？</h2>
+            </div>
+
+            <div class="quote-box">
+                「把人脈、舞台、資源串起來，讓會友真的有商機。」
+            </div>
+
+            <div class="card-grid">
+                <div class="card card--center">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                    </div>
+                    <h3 class="card__title">幫會友賺到【人脈】</h3>
+                    <p class="card__desc">讓會員之間互相認識、理解彼此的專業與需求，把「認識」變成「合作」</p>
+                </div>
+                <div class="card card--center">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>
+                    </div>
+                    <h3 class="card__title">幫會友創造【舞台】</h3>
+                    <p class="card__desc">提供上台分享、擺攤、展示產品服務的機會，用低風險方式試水溫</p>
+                </div>
+                <div class="card card--center">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                    </div>
+                    <h3 class="card__title">幫分會建立【外部連結】</h3>
+                    <p class="card__desc">對接政府單位、商圈、姐妹會，讓活動變成真正的商務與資源交流</p>
+                </div>
+            </div>
+
+            <div class="tag-list">
+                <span class="tag">👥 會友</span>
+                <span class="tag">🏪 在地店家</span>
+                <span class="tag">🏛️ 政府單位</span>
+                <span class="tag">🤝 姐妹會</span>
+                <span class="tag">🌐 合作夥伴</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 3: 價值說明 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">02</span>
+                <h2 class="slide__title">商業交流的價值：對誰有幫助？</h2>
+            </div>
+
+            <div class="card-grid">
+                <div class="card card--center">
+                    <div class="card__icon" style="background: linear-gradient(135deg, #60a5fa, #3b82f6);">
+                        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                    </div>
+                    <h3 class="card__title">對會友</h3>
+                    <p class="card__desc">認識不同產業的夥伴<br>增加曝光機會與合作機會<br>獲得專業成長資源</p>
+                </div>
+                <div class="card card--center">
+                    <div class="card__icon" style="background: linear-gradient(135deg, #4ade80, #22c55e);">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+                    </div>
+                    <h3 class="card__title">對分會</h3>
+                    <p class="card__desc">打造「懂商業、會交流」的分會形象<br>活動有內容、有專業、也有溫度</p>
+                </div>
+                <div class="card card--center">
+                    <div class="card__icon" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6);">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                    </div>
+                    <h3 class="card__title">對地方與政府</h3>
+                    <p class="card__desc">串連商圈與青年創業者<br>承接青年局等單位的政策與資源</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 4: 四大工作目標 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">03</span>
+                <h2 class="slide__title">2026 商業交流委員會四大工作目標</h2>
+            </div>
+
+            <div class="card-grid card-grid--2">
+                <div class="goal-card">
+                    <div class="goal-card__num">1</div>
+                    <div>
+                        <h3 class="goal-card__title">人脈連結</h3>
+                        <p class="goal-card__desc">讓新舊會友都能彼此認識、熟悉專業</p>
+                    </div>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-card__num">2</div>
+                    <div>
+                        <h3 class="goal-card__title">商機促成</h3>
+                        <p class="goal-card__desc">讓介紹合作、接案、共創專案變成常態</p>
+                    </div>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-card__num">3</div>
+                    <div>
+                        <h3 class="goal-card__title">學習成長</h3>
+                        <p class="goal-card__desc">讓會友在品牌、行銷、AI 等面向一起升級</p>
+                    </div>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-card__num">4</div>
+                    <div>
+                        <h3 class="goal-card__title">在地與國際連結</h3>
+                        <p class="goal-card__desc">串聯商圈、政府與姐妹會，拓展新舞台</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 5: 目標一 - 人脈連結 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">04</span>
+                <h2 class="slide__title">目標一：人脈連結</h2>
+            </div>
+
+            <div class="info-section">
+                <h3 class="info-section__title">年度活動規劃</h3>
+                <ul class="info-list">
+                    <li>每年規劃 3–4 場交流活動（實體或線上）</li>
+                    <li>商業小聚、Speed Networking、親子商業學習遊戲</li>
+                    <li>讓會友在輕鬆氛圍中建立深度連結</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3 class="info-section__title">新會員融入機制</h3>
+                <ul class="info-list">
+                    <li>新會員三個月內至少有一次「舞台」機會</li>
+                    <li>被介紹或自我介紹，讓大家認識你</li>
+                    <li>協助建立個人簡介＋事業簡介</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 6: 目標二 - 商機促成 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">05</span>
+                <h2 class="slide__title">目標二：商機促成</h2>
+            </div>
+
+            <div class="info-section">
+                <h3 class="info-section__title">建立「會員事業名冊」</h3>
+                <ul class="info-list">
+                    <li>基本資料、產業別、服務內容</li>
+                    <li>目前需求（找客戶？找合作？找供應商？）</li>
+                    <li>每季整理 3–5 件實際合作或媒合案例</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3 class="info-section__title">活動設計巧思</h3>
+                <ul class="info-list">
+                    <li>名片交流時間(Speed Networking)／主題分組</li>
+                    <li>需求留言牆：讓「我在找⋯」被看見</li>
+                    <li>讓「認識」更容易變成「合作」</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 7: 目標三 - 學習成長 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">06</span>
+                <h2 class="slide__title">目標三：學習成長</h2>
+            </div>
+
+            <div class="info-section">
+                <h3 class="info-section__title">主題學習活動（每年至少 2 場）</h3>
+                <ul class="info-list">
+                    <li>個人品牌與自媒體經營</li>
+                    <li>AI 工具在小型店家、SOHO、創業者的運用</li>
+                    <li>電商、社群、內容行銷入門</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3 class="info-section__title">活動形式設計</h3>
+                <ul class="info-list">
+                    <li>前半段：觀念＋案例分享</li>
+                    <li>後半段：小組討論或簡單實作</li>
+                    <li>活動後提供：簡報懶人包／實用連結／工具清單</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 8: 目標四 - 在地與國際連結 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">07</span>
+                <h2 class="slide__title">目標四：在地與國際連結</h2>
+            </div>
+
+            <div class="card-grid">
+                <div class="card card--center">
+                    <div class="card__icon" style="background: linear-gradient(135deg, #fb923c, #f97316);">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg>
+                    </div>
+                    <h3 class="card__title">在地連結</h3>
+                    <p class="card__desc">與三峽老街、在地商圈、宮廟、場地方合作，串聯在地品牌與青創店家</p>
+                </div>
+                <div class="card card--center">
+                    <div class="card__icon" style="background: linear-gradient(135deg, #4ade80, #22c55e);">
+                        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
+                    </div>
+                    <h3 class="card__title">政府資源</h3>
+                    <p class="card__desc">青年局、經發局、勞工局等相關單位，邀請說明補助、課程、空間資源</p>
+                </div>
+                <div class="card card--center">
+                    <div class="card__icon" style="background: linear-gradient(135deg, #60a5fa, #3b82f6);">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                    </div>
+                    <h3 class="card__title">國際交流</h3>
+                    <p class="card__desc">姐妹會（如坡州 JC）線上或實體交流，設計簡單的商務媒合或品牌分享</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 9: 代表案例 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">08</span>
+                <h2 class="slide__title">代表案例：青創講堂暨商業聯誼市集</h2>
+            </div>
+
+            <div class="case-header">
+                <span class="case-header__badge">2025 旗艦活動</span>
+                <span class="case-header__title">青年創業實戰 ＋ 市集曝光 ＋ 人脈交流</span>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-item">
+                    <div class="value-item__icon">🎯</div>
+                    <div class="value-item__label">對青創業者</div>
+                    <div class="value-item__text">低成本試營運平台</div>
+                </div>
+                <div class="value-item">
+                    <div class="value-item__icon">🎤</div>
+                    <div class="value-item__label">對會友</div>
+                    <div class="value-item__text">舞台分享與擺攤曝光</div>
+                </div>
+                <div class="value-item">
+                    <div class="value-item__icon">🏛️</div>
+                    <div class="value-item__label">對政府商圈</div>
+                    <div class="value-item__text">實際合作的場域</div>
+                </div>
+                <div class="value-item">
+                    <div class="value-item__icon">🏆</div>
+                    <div class="value-item__label">對分會品牌</div>
+                    <div class="value-item__text">展現專業執行力</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 10: 活動設計元素 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">09</span>
+                <h2 class="slide__title">案例拆解：活動設計元素</h2>
+            </div>
+
+            <div class="card-grid card-grid--2">
+                <div class="info-section" style="margin-bottom: 0;">
+                    <h3 class="info-section__title">主題設計</h3>
+                    <ul class="info-list">
+                        <li>講堂＋市集＋交流</li>
+                        <li>內容＋實戰＋人脈</li>
+                    </ul>
+                </div>
+                <div class="info-section" style="margin-bottom: 0;">
+                    <h3 class="info-section__title">合作對象</h3>
+                    <ul class="info-list">
+                        <li>青年局</li>
+                        <li>在地商圈／場地單位</li>
+                        <li>姐妹會</li>
+                    </ul>
+                </div>
+                <div class="info-section" style="margin-bottom: 0;">
+                    <h3 class="info-section__title">流程模組</h3>
+                    <ul class="info-list">
+                        <li>開場與貴賓致詞</li>
+                        <li>政府資源簡報</li>
+                        <li>創業主題講座</li>
+                        <li>會員品牌分享</li>
+                        <li>市集自由交流</li>
+                    </ul>
+                </div>
+                <div class="info-section" style="margin-bottom: 0;">
+                    <h3 class="info-section__title">可複製要點</h3>
+                    <ul class="info-list">
+                        <li>清楚的合作分工表</li>
+                        <li>報名表收集需求</li>
+                        <li>活動後追蹤機制</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 11: 三個問題 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">10</span>
+                <h2 class="slide__title">給未來商業交流主委的三個問題</h2>
+            </div>
+
+            <div class="card-grid">
+                <div class="q-card">
+                    <div class="q-card__num">1</div>
+                    <h4 class="q-card__title">今年最想幫會友解決的「痛點」是什麼？</h4>
+                    <ul class="q-card__list">
+                        <li>找不到客戶？</li>
+                        <li>不會曝光？</li>
+                        <li>沒舞台練習？</li>
+                        <li>不會用數位工具？</li>
+                    </ul>
+                </div>
+                <div class="q-card">
+                    <div class="q-card__num">2</div>
+                    <h4 class="q-card__title">年底希望說出哪三件具體成果？</h4>
+                    <ul class="q-card__list">
+                        <li>促成 X 件合作</li>
+                        <li>辦完一場旗艦活動</li>
+                        <li>完成會員事業資料庫</li>
+                    </ul>
+                </div>
+                <div class="q-card">
+                    <div class="q-card__num">3</div>
+                    <h4 class="q-card__title">活動結束後，接下來是什麼？</h4>
+                    <ul class="q-card__list">
+                        <li>有沒有 Line 群組？</li>
+                        <li>名單整理了嗎？</li>
+                        <li>如何讓活動變長期關係？</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 12: 年度活動菜單 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">11</span>
+                <h2 class="slide__title">年度活動菜單建議</h2>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="menu-item__type">每年 1 場</span>
+                    <h4 class="menu-item__title">旗艦活動</h4>
+                    <p class="menu-item__desc">青創講堂＋市集／大型商業交流晚會<br>結合公部門、國際來賓、在地商圈</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item__type">每季 1 場</span>
+                    <h4 class="menu-item__title">季度商業小聚</h4>
+                    <p class="menu-item__desc">Speed Networking、自我介紹之夜<br>主題分享、品牌故事會</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item__type">1–2 場</span>
+                    <h4 class="menu-item__title">企業參訪＋實戰分享</h4>
+                    <p class="menu-item__desc">走進會友或合作企業<br>了解真實運作、學習實戰經驗</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item__type">1 場</span>
+                    <h4 class="menu-item__title">國際交流專場</h4>
+                    <p class="menu-item__desc">與姐妹會線上／實體分享<br>創業與商業經驗交流</p>
+                </div>
+                <div class="menu-item menu-item--wide">
+                    <span class="menu-item__type">不定期</span>
+                    <h4 class="menu-item__title">線上延伸活動</h4>
+                    <p class="menu-item__desc">IG/FB Live 訪談會員 ｜ 小型線上讀書會 ｜ 工具分享會</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 13: 運作心法 ========== -->
+    <section class="slide slide--content">
+        <div class="slide-inner">
+            <div class="slide__header">
+                <span class="slide__number">12</span>
+                <h2 class="slide__title">商業交流運作心法</h2>
+            </div>
+
+            <div class="card-grid">
+                <div class="principle-card">
+                    <div class="principle-card__emoji">📖</div>
+                    <h4 class="principle-card__title">每場活動都要有「故事」</h4>
+                    <p class="principle-card__desc">至少記錄 1–2 件因活動而產生的合作或改變，讓成果可以被看見、被傳頌</p>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-card__emoji">💾</div>
+                    <h4 class="principle-card__title">把資料留下來</h4>
+                    <p class="principle-card__desc">參與名單、需求標籤、媒合紀錄<br>活動照片、精華整理、回饋表</p>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-card__emoji">🌱</div>
+                    <h4 class="principle-card__title">培養下一代幹部</h4>
+                    <p class="principle-card__desc">多讓幹部上台主持或負責段落<br>讓有意願的人提早參與規劃與執行</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Slide 15: CTA ========== -->
+    <section class="slide slide--cta">
+        <div class="slide-inner" style="max-width: 800px;">
+            <h2 class="cta__title">下一步與邀請</h2>
+            <p class="cta__subtitle">讓我們一起把商業交流委員會的價值<br>轉化為實際的人脈、商機與成長</p>
+
+            <div class="cta-boxes">
+                <div class="cta-box">
+                    <h4 class="cta-box__title">👋 對新會友</h4>
+                    <p class="cta-box__desc">歡迎主動讓大家認識你的事業與專長，如果有需求（找客戶／找合作夥伴），可以先跟商業交流主委說</p>
+                </div>
+                <div class="cta-box">
+                    <h4 class="cta-box__title">🎯 對未來主委與幹部</h4>
+                    <p class="cta-box__desc">這份簡報可以當成交接與年度規劃的基礎，歡迎依照自己的風格調整主題與活動形式</p>
+                </div>
+            </div>
+
+            <div class="cta__quote">
+                「期待在三峽青商，讓更多合作、更多故事，<br>從商業交流委員會開始。」
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Modal ========== -->
+    <div class="modal-overlay" id="memberModal">
+        <div class="modal">
+            <div class="modal__header">
+                <h3 class="modal__title" id="modalTitle">會員名錄</h3>
+                <button class="modal__close" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal__tabs" id="modalTabs">
+                <button class="modal__tab is-active" data-tab="all" onclick="switchTab('all')">全部</button>
+                <button class="modal__tab" data-tab="幹部" onclick="switchTab('幹部')">幹部</button>
+                <button class="modal__tab" data-tab="理監事" onclick="switchTab('理監事')">理監事</button>
+                <button class="modal__tab" data-tab="會員" onclick="switchTab('會員')">會員</button>
+            </div>
+            <div class="modal__body" id="modalBody"></div>
+            <div class="modal__footer">
+                <span class="modal__count" id="memberCount">共 30 位會員</span>
+                <span class="modal__hint">點擊產業標籤可篩選</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 會員資料
+        const members = [
+            { name: "曾華亨", position: "會長", company: "A華滷味", title: "負責人", industry: "餐飲" },
+            { name: "林昀叡", position: "輔導會長", company: "信鈞文教", title: "營運長", industry: "專業服務" },
+            { name: "侯志伽", position: "秘書長", company: "鳳凰廣告", title: "副社長", industry: "專業服務" },
+            { name: "劉雨璇", position: "財務長", company: "新加坡商全美世界控股有限公司", title: "高級組織經理", industry: "零售" },
+            { name: "施家翔", position: "副會長", company: "來記赤肉庚", title: "負責人", industry: "餐飲" },
+            { name: "黃采婷", position: "副會長", company: "富邦人壽", title: "業務主任", industry: "金融保險" },
+            { name: "周昱昇", position: "OB主席", company: "周冠衛浴有限公司", title: "副總經理", industry: "製造工程" },
+            { name: "陳森宏", position: "法治顧問", company: "南山人壽", title: "業務主任", industry: "金融保險" },
+            { name: "林書緯", position: "常務監事", company: "", title: "", industry: "" },
+            { name: "吳昇翰", position: "監事", company: "吳琪銘辦公室", title: "主任", industry: "公職" },
+            { name: "吳偉芳", position: "監事", company: "聚策聯合法律事務所", title: "律師", industry: "專業服務" },
+            { name: "張鈞皓", position: "理事", company: "冠味餐飲有限公司", title: "負責人", industry: "餐飲" },
+            { name: "蘇家潁", position: "理事", company: "星繫系統科技有限公司", title: "總經理", industry: "科技" },
+            { name: "周畯竑", position: "理事", company: "輔仁大學", title: "模特", industry: "" },
+            { name: "廖盈慧", position: "理事", company: "南山人壽", title: "", industry: "金融保險" },
+            { name: "楊弦斌", position: "會員", company: "順鋒國際餐飲有限公司", title: "負責人", industry: "餐飲" },
+            { name: "黃偉倫", position: "會員", company: "U3CENTER SPA", title: "負責人", industry: "美容" },
+            { name: "林翊峰", position: "會員", company: "", title: "", industry: "" },
+            { name: "吳家豪", position: "會員", company: "粥族廣東粥", title: "負責人", industry: "餐飲" },
+            { name: "張怡如", position: "會員", company: "不動產", title: "經理人", industry: "零售" },
+            { name: "劉柏楷", position: "會員", company: "樂邁股份有限公司", title: "業務經理", industry: "製造工程" },
+            { name: "王思承", position: "會員", company: "宏華國際股份有限公司", title: "工程師", industry: "製造工程" },
+            { name: "呂家愷", position: "會員", company: "議員", title: "", industry: "公職" },
+            { name: "簡博煒", position: "會員", company: "叢林影音公司", title: "負責人", industry: "媒體" },
+            { name: "沈品銓", position: "會員", company: "伸優人力仲介有限公司", title: "經理", industry: "專業服務" },
+            { name: "李冠廷", position: "會員", company: "省不廷萬物百貨", title: "負責人", industry: "零售" },
+            { name: "蕭允福", position: "會員", company: "好口碑企業有限公司", title: "負責人", industry: "零售" },
+            { name: "柯佩辰", position: "會員", company: "LEXUS汽車", title: "銷售課長", industry: "零售" },
+            { name: "王郁文", position: "見習會員", company: "", title: "律師", industry: "專業服務" }
+        ];
+
+        // 職位分類
+        const positionGroups = {
+            '幹部': ['會長', '輔導會長', '法治顧問', '秘書長', '財務長', '副會長', 'OB主席'],
+            '理監事': ['常務監事', '監事', '理事'],
+            '會員': ['會員', '見習會員'] 
+        };
+
+        // 是否為幹部
+        function isLeader(position) {
+            return ['會長', '輔導會長', '秘書長', '財務長', '副會長'].includes(position);
+        }
+
+        // 建立會員卡片
+        function createCard(m) {
+            const avatarClass = isLeader(m.position) ? 'member-card__avatar member-card__avatar--leader' : 'member-card__avatar';
+            return `
+                <div class="member-card">
+                    <div class="${avatarClass}">${m.name.charAt(0)}</div>
+                    <div class="member-card__info">
+                        <div class="member-card__name">${m.name}</div>
+                        <span class="member-card__position">${m.position}</span>
+                        ${m.company ? `<div class="member-card__company">${m.company}${m.title ? ' · ' + m.title : ''}</div>` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // 建立分組
+        function createGroup(title, list) {
+            if (!list.length) return '';
+            return `
+                <div class="member-group">
+                    <h4 class="member-group__title">${title} <span class="member-group__badge">${list.length} 位</span></h4>
+                    <div class="member-list">${list.map(createCard).join('')}</div>
+                </div>
+            `;
+        }
+
+        // 篩選會員
+        function filterMembers(filter) {
+            if (filter === 'all') return members;
+            if (positionGroups[filter]) {
+                return members.filter(m => positionGroups[filter].includes(m.position));
+            }
+            return members.filter(m => m.industry && m.industry.includes(filter));
+        }
+
+        // 渲染 Modal
+        function renderModal(filter) {
+            const body = document.getElementById('modalBody');
+            const count = document.getElementById('memberCount');
+            const title = document.getElementById('modalTitle');
+
+            const filtered = filterMembers(filter);
+            let html = '';
+
+            const titles = {
+                'all': '全部會員名錄', '幹部': '幹部團隊', '理監事': '理監事會', '會員': '一般會員',
+                '餐飲': '餐飲業', '金融保險': '金融保險業', '專業服務': '專業服務業',
+                '製造工程': '製造/工程業', '零售': '零售百貨業', '公職': '公職/政治',
+                '科技': '科技業', '媒體': '媒體影音', '美容': '美容SPA'
+            };
+            title.textContent = titles[filter] || '會員名錄';
+
+            if (filter === 'all') {
+                html += createGroup('幹部團隊', filtered.filter(m => positionGroups['幹部'].includes(m.position)));
+                html += createGroup('理監事會', filtered.filter(m => positionGroups['理監事'].includes(m.position)));
+                html += createGroup('一般會員', filtered.filter(m => positionGroups['會員'].includes(m.position)));
+            } else {
+                html = `<div class="member-list">${filtered.map(createCard).join('')}</div>`;
+            }
+
+            body.innerHTML = html || '<p style="text-align:center;color:#64748b;padding:40px;">此分類暫無資料</p>';
+            count.textContent = `共 ${filtered.length} 位會員`;
+        }
+
+        // 開啟 Modal
+        function openModal(filter = 'all') {
+            document.getElementById('memberModal').classList.add('is-active');
+            document.body.style.overflow = 'hidden';
+            updateTabs(filter);
+            renderModal(filter);
+        }
+
+        // 關閉 Modal
+        function closeModal() {
+            document.getElementById('memberModal').classList.remove('is-active');
+            document.body.style.overflow = '';
+        }
+
+        // 切換 Tab
+        function switchTab(tab) {
+            updateTabs(tab);
+            renderModal(tab);
+        }
+
+        // 更新 Tab 狀態
+        function updateTabs(active) {
+            document.querySelectorAll('.modal__tab').forEach(t => {
+                t.classList.toggle('is-active', t.dataset.tab === active);
+            });
+        }
+
+        // 點擊外部關閉
+        document.getElementById('memberModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // ESC 關閉
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>

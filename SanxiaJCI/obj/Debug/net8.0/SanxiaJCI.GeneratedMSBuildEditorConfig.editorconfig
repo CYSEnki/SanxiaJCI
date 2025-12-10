@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NNYXJrZXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Source/SanxiaJCI/SanxiaJCI/Views/BusinessMarket/introduction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NNYXJrZXRcaW50cm9kdWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Source/SanxiaJCI/SanxiaJCI/Views/BusinessMarket/Local.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NNYXJrZXRcTG9jYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

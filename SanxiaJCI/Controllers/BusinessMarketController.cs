@@ -431,5 +431,12 @@ namespace SanxiaJCI.Controllers
             // 在地創生
             return View();
         }
+
+        [HttpGet]
+        public IActionResult introduction()
+        {
+            // 在地創生
+            return View();
+        }
     }
 }
