@@ -1,0 +1,132 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "分會關係導覽";
+}
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="theme-color" content="#0a1628" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>@ViewData["Title"] - 三峽國際青年商會</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin="" />
+
+    <!-- Custom Styles -->
+    <link href="/css/chapter-relations.css?v=4" rel="stylesheet" />
+</head>
+<body>
+    <!-- Website Link (右上角) -->
+    <a href="/Home/About" class="site-nav-link">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+        </svg>
+        <span>官網</span>
+    </a>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <!-- Edge Fade Overlay -->
+    <div class="edge-fade-overlay"></div>
+
+    <!-- Page Title -->
+    <div class="page-title" id="pageTitle">
+        <h1>三峽國際青年商會</h1>
+        <p>分會關係網絡</p>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend" id="legend">
+        <div class="legend-title">分會關係</div>
+        <div class="legend-item">
+            <div class="legend-dot main"></div>
+            <span>三峽分會</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot mother"></div>
+            <span>母會</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot brother"></div>
+            <span>兄弟會</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot friend"></div>
+            <span>友好會</span>
+        </div>
+        <div class="legend-item" id="legendSister" style="display: none;">
+            <div class="legend-dot sister"></div>
+            <span>姐妹會</span>
+        </div>
+    </div>
+
+    <!-- Side List Container (東亞視圖時顯示) -->
+    <div class="side-list-container" id="sideListContainer">
+        <!-- 台灣分會列表 -->
+        <div class="side-list side-list-taiwan">
+            <div class="side-list-title">台灣分會</div>
+            <div class="side-list-item item-main">
+                <div class="item-dot"></div>
+                <span>三峽分會</span>
+                <span class="item-type">我們的分會</span>
+            </div>
+            <div class="side-list-item item-mother">
+                <div class="item-dot"></div>
+                <span>土城分會</span>
+                <span class="item-type">母會</span>
+            </div>
+            <div class="side-list-item item-friend">
+                <div class="item-dot"></div>
+                <span>三重分會</span>
+                <span class="item-type">友好會</span>
+            </div>
+            <div class="side-list-item item-brother">
+                <div class="item-dot"></div>
+                <span>大雅分會</span>
+                <span class="item-type">兄弟會</span>
+            </div>
+            <div class="side-list-item item-friend">
+                <div class="item-dot"></div>
+                <span>豐原分會</span>
+                <span class="item-type">友好會</span>
+            </div>
+            <div class="side-list-item item-brother">
+                <div class="item-dot"></div>
+                <span>民雄分會</span>
+                <span class="item-type">兄弟會</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <button class="skip-btn" id="skipBtn">跳過動畫</button>
+    <button class="enter-btn" id="enterBtn">
+        <span>44、45屆交接典禮</span>
+        <svg viewBox="0 0 24 24" width="20" height="20">
+            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor" />
+        </svg>
+    </button>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+
+    <!-- Custom JS -->
+    <script src="/js/chapter-relations.js?v=4"></script>
+</body>
+</html>

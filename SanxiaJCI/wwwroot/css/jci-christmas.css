@@ -1,0 +1,1479 @@
+/**
+ * JCI Sanxia - Christmas Handover 2025
+ * jci-christmas.css
+ * 
+ * 效能優化策略：
+ * 1. 關鍵 CSS 優先（Hero 區塊）
+ * 2. 使用 CSS 變數減少重複
+ * 3. 避免過度使用 box-shadow 和 filter
+ * 4. 動畫使用 transform 和 opacity（GPU 加速）
+ */
+
+/* ===== CSS 變數 ===== */
+:root {
+    --jci-blue: #1a5f7a;
+    --jci-blue-dark: #0d3d4d;
+    --jci-gold: #d4af37;
+    --jci-gold-light: #f4e4bc;
+    --christmas-red: #c41e3a;
+    --christmas-green: #165b33;
+    --snow-white: #f8fafc;
+    --warm-cream: #fffef5;
+    --text-dark: #1a1a2e;
+    --text-muted: #64748b;
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+}
+
+/* ===== 關鍵 CSS - 首屏渲染 ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--warm-cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Hero - 最高優先級 */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--jci-blue-dark);
+}
+
+    /* 當 header 為固定浮動時，調整 Hero 內容位置 */
+    .hero-section .hero-content {
+        padding-top: 0;
+    }
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 4px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.2s;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--jci-gold-light);
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.4s;
+}
+
+/* ===== 動畫關鍵幀 ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 聖誕徽章 ===== */
+.christmas-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(196, 30, 58, 0.95), rgba(212, 175, 55, 0.95));
+    padding: 10px 25px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: fadeInDown 0.8s ease forwards;
+}
+
+    .christmas-badge span {
+        color: white;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+/* ===== 打字機效果 ===== */
+.typed-container {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: white;
+    margin-bottom: 25px;
+    min-height: 50px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.5s;
+}
+
+.typed-jci {
+    color: var(--jci-gold);
+    font-weight: 700;
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.2em;
+    background: var(--jci-gold);
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* ===== Hero 描述 ===== */
+.hero-description {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 600px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+
+/* ===== 倒數計時 ===== */
+.countdown-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.7s;
+}
+
+.countdown-item {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 12px 18px;
+    min-width: 70px;
+    text-align: center;
+}
+
+.countdown-value {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--jci-gold);
+    line-height: 1;
+}
+
+.countdown-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* ===== CTA 按鈕 ===== */
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, var(--jci-gold), #e6c65a);
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.8s;
+}
+
+    .hero-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        color: var(--text-dark);
+        text-decoration: none;
+    }
+
+    .hero-cta svg {
+        width: 20px;
+        height: 20px;
+        transition: transform var(--transition-fast);
+    }
+
+    .hero-cta:hover svg {
+        transform: translateX(5px);
+    }
+
+/* ===== 雪花效果 ===== */
+.snowflakes-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.snowflake {
+    position: absolute;
+    top: -20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    will-change: transform;
+    animation: snowfall linear forwards;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+/* ===== 聖誕燈串 ===== */
+.christmas-lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.light-bulb {
+    width: 10px;
+    height: 16px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    will-change: opacity, transform;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+    .light-bulb:nth-child(4n+1) {
+        background: #ff6b6b;
+        box-shadow: 0 0 10px #ff6b6b;
+    }
+
+    .light-bulb:nth-child(4n+2) {
+        background: #4ecdc4;
+        box-shadow: 0 0 10px #4ecdc4;
+        animation-delay: 0.2s;
+    }
+
+    .light-bulb:nth-child(4n+3) {
+        background: #ffe66d;
+        box-shadow: 0 0 10px #ffe66d;
+        animation-delay: 0.4s;
+    }
+
+    .light-bulb:nth-child(4n) {
+        background: #95e1d3;
+        box-shadow: 0 0 10px #95e1d3;
+        animation-delay: 0.6s;
+    }
+
+@keyframes glow {
+    0% {
+        opacity: 0.4;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== 滾動指示 ===== */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+    .scroll-indicator svg {
+        width: 28px;
+        height: 28px;
+        fill: rgba(255, 255, 255, 0.7);
+    }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-12px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-6px);
+    }
+}
+
+/* ===== 區塊共用樣式 ===== */
+.section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--jci-blue-dark);
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--jci-gold), var(--christmas-red));
+        border-radius: 2px;
+    }
+
+.section-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* ===== 介紹區塊 ===== */
+.intro-section {
+    background: linear-gradient(180deg, var(--warm-cream) 0%, white 100%);
+}
+
+.intro-text {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.intro-title {
+    color: var(--jci-blue-dark);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+/* ===== 會長區塊 ===== */
+.profile-section {
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+    .profile-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 280px;
+        background: linear-gradient(135deg, var(--jci-blue) 0%, var(--jci-blue-dark) 100%);
+        clip-path: ellipse(80% 100% at 50% 0%);
+    }
+
+.president-card {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.president-image-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+}
+
+    .president-image-wrapper::before {
+        content: '';
+        position: absolute;
+        inset: -8px;
+        border: 3px solid var(--jci-gold);
+        border-radius: 50%;
+        animation: rotateBorder 15s linear infinite;
+    }
+
+@keyframes rotateBorder {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.president-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.president-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--jci-blue-dark);
+    margin-bottom: 5px;
+}
+
+.president-title {
+    color: var(--jci-gold);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+}
+
+/* ===== 資料卡片 ===== */
+.info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+    .info-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--jci-blue), var(--jci-gold), var(--christmas-red));
+    }
+
+.info-card-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--jci-blue-dark);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .info-card-title svg {
+        width: 26px;
+        height: 26px;
+        fill: var(--jci-gold);
+    }
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .info-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 0.95rem;
+    }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list li strong {
+            color: var(--jci-blue);
+            min-width: 90px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .info-list li a {
+            color: var(--jci-blue);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+            .info-list li a:hover {
+                color: var(--christmas-red);
+            }
+
+/* ===== 組織圖區塊 ===== */
+.org-chart-section {
+    background: linear-gradient(180deg, #f1f5f9 0%, white 100%);
+}
+
+.org-chart-wrapper {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+}
+
+    .org-chart-wrapper img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+/* ===== 四大機會區塊 ===== */
+.opportunities-section {
+    background: linear-gradient(135deg, var(--jci-blue-dark) 0%, var(--jci-blue) 100%);
+    position: relative;
+}
+
+    .opportunities-section .section-title {
+        color: white;
+    }
+
+        .opportunities-section .section-title::after {
+            background: linear-gradient(90deg, var(--jci-gold), white);
+        }
+
+    .opportunities-section .section-subtitle {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+.opportunity-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 30px 22px;
+    height: 100%;
+    transition: transform var(--transition-normal), background var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+    .opportunity-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--jci-gold);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform var(--transition-normal);
+    }
+
+    .opportunity-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+        .opportunity-card:hover::before {
+            transform: scaleX(1);
+        }
+
+.opportunity-icon {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, var(--jci-gold), #e6c65a);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+    .opportunity-icon svg {
+        width: 28px;
+        height: 28px;
+        fill: var(--text-dark);
+    }
+
+.opportunity-card h5 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.opportunity-card p,
+.opportunity-card ul {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.opportunity-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .opportunity-card ul li {
+        padding: 5px 0;
+        padding-left: 18px;
+        position: relative;
+    }
+
+        .opportunity-card ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--jci-gold);
+            font-size: 0.7rem;
+        }
+
+/* ===== 入會條件區塊 ===== */
+.join-section {
+    background: white;
+}
+
+.join-card {
+    background: linear-gradient(135deg, var(--warm-cream) 0%, white 100%);
+    border-radius: 20px;
+    padding: 45px;
+    border: 2px solid rgba(212, 175, 55, 0.25);
+    position: relative;
+}
+
+    .join-card::before {
+        content: '🎄';
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 2.5rem;
+        opacity: 0.15;
+    }
+
+.join-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    color: var(--jci-blue-dark);
+    margin-bottom: 20px;
+}
+
+.join-requirements {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+    .join-requirements li {
+        padding: 10px 0;
+        padding-left: 32px;
+        position: relative;
+        font-size: 0.95rem;
+    }
+
+        .join-requirements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 22px;
+            height: 22px;
+            background: var(--christmas-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+.fee-info {
+    background: rgba(26, 95, 122, 0.06);
+    border-radius: 12px;
+    padding: 22px;
+    border-left: 4px solid var(--jci-blue);
+}
+
+    .fee-info p {
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+    }
+
+        .fee-info p:last-child {
+            margin-bottom: 0;
+        }
+
+/* ===== 聯絡區塊 ===== */
+.contact-section {
+    background: linear-gradient(180deg, #f8fafc 0%, var(--warm-cream) 100%);
+}
+
+.contact-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.06);
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+    border: 1px solid transparent;
+}
+
+    .contact-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--jci-gold);
+    }
+
+.contact-avatar {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--jci-blue), var(--jci-blue-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    font-size: 1.8rem;
+}
+
+.contact-card h5 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--jci-blue-dark);
+    margin-bottom: 5px;
+}
+
+.contact-role {
+    color: var(--jci-gold);
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.contact-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(26, 95, 122, 0.08);
+    padding: 10px 18px;
+    border-radius: 50px;
+    color: var(--jci-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+    .contact-phone:hover {
+        background: var(--jci-blue);
+        color: white;
+    }
+
+    .contact-phone svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+    }
+
+/* ===== CTA 區塊 ===== */
+.cta-section {
+    background: linear-gradient(135deg, var(--christmas-red) 0%, #a01830 100%);
+    padding: 70px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: white;
+    margin-bottom: 18px;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-bottom: 28px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: var(--christmas-red);
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+    .cta-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        color: var(--christmas-red);
+        text-decoration: none;
+    }
+
+/* ===== AOS 動畫 ===== */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+    [data-aos].aos-animate {
+        opacity: 1;
+    }
+
+[data-aos="fade-up"] {
+    transform: translateY(30px);
+}
+
+    [data-aos="fade-up"].aos-animate {
+        transform: translateY(0);
+    }
+
+[data-aos="fade-right"] {
+    transform: translateX(-30px);
+}
+
+    [data-aos="fade-right"].aos-animate {
+        transform: translateX(0);
+    }
+
+[data-aos="fade-left"] {
+    transform: translateX(30px);
+}
+
+    [data-aos="fade-left"].aos-animate {
+        transform: translateX(0);
+    }
+
+[data-aos="zoom-in"] {
+    transform: scale(0.9);
+}
+
+    [data-aos="zoom-in"].aos-animate {
+        transform: scale(1);
+    }
+
+/* ===== 響應式設計 ===== */
+
+/* 平板 (max-width: 992px) */
+@media (max-width: 992px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .info-card {
+        padding: 28px;
+    }
+
+    .join-card {
+        padding: 35px;
+    }
+
+    .opportunity-card {
+        padding: 25px 18px;
+    }
+
+    /* 會長區塊調整 */
+    .profile-section::before {
+        height: 250px;
+    }
+
+    .president-card {
+        padding-top: 40px;
+    }
+
+    .president-image-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* 手機橫向 & 小平板 (max-width: 768px) */
+@media (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
+
+    /* Hero 區塊 - 基本設定，JS 會動態調整 padding-top */
+    .hero-section {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .hero-content {
+        padding: 80px 20px 100px; /* 預設值，JS 會根據 header 高度覆蓋 padding-top */
+        min-height: 100vh;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+
+    .christmas-badge {
+        padding: 8px 18px;
+        margin-bottom: 20px;
+    }
+
+        .christmas-badge span {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+    .typed-container {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .countdown-item {
+        min-width: 60px;
+        padding: 10px 14px;
+    }
+
+    .countdown-value {
+        font-size: 1.5rem;
+    }
+
+    .countdown-label {
+        font-size: 0.65rem;
+    }
+
+    .christmas-lights {
+        gap: 15px;
+        /* top 由 JS 動態設定以適應 header 高度 */
+    }
+
+    .light-bulb {
+        width: 8px;
+        height: 12px;
+    }
+
+    /* 會長區塊 - 重點修復 */
+    .profile-section::before {
+        height: 220px;
+        clip-path: ellipse(90% 100% at 50% 0%);
+    }
+
+    .president-card {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .president-image-wrapper {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 25px;
+    }
+
+        .president-image-wrapper::before {
+            inset: -6px;
+            border-width: 2px;
+        }
+
+    .president-name {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .president-title {
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+    }
+
+    /* 資料卡片 */
+    .info-card {
+        padding: 22px;
+        margin-top: 20px;
+    }
+
+    .info-card-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+        .info-card-title svg {
+            width: 22px;
+            height: 22px;
+        }
+
+    .info-list li {
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px 0;
+    }
+
+        .info-list li strong {
+            min-width: auto;
+            font-size: 0.85rem;
+        }
+
+    /* 組織圖 */
+    .org-chart-wrapper {
+        padding: 15px;
+    }
+
+    /* 四大機會 */
+    .opportunity-card {
+        padding: 22px 18px;
+    }
+
+    .opportunity-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+        .opportunity-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+    .opportunity-card h5 {
+        font-size: 1.1rem;
+    }
+
+    /* 入會區塊 */
+    .join-card {
+        padding: 28px;
+    }
+
+        .join-card::before {
+            font-size: 2rem;
+            top: 15px;
+            right: 20px;
+        }
+
+    .join-title {
+        font-size: 1.15rem;
+    }
+
+    .join-requirements li {
+        font-size: 0.9rem;
+        padding-left: 28px;
+    }
+
+        .join-requirements li::before {
+            width: 20px;
+            height: 20px;
+            font-size: 0.7rem;
+        }
+
+    .fee-info {
+        padding: 18px;
+    }
+
+        .fee-info p {
+            font-size: 0.85rem;
+        }
+
+    /* 聯絡卡片 */
+    .contact-card {
+        padding: 24px 20px;
+    }
+
+    .contact-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .contact-card h5 {
+        font-size: 1.05rem;
+    }
+
+    .contact-phone {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    /* CTA 區塊 */
+    .cta-section {
+        padding: 50px 0;
+    }
+
+        .cta-section h2 {
+            font-size: 1.4rem;
+            padding: 0 15px;
+        }
+
+        .cta-section p {
+            font-size: 0.9rem;
+            padding: 0 20px;
+        }
+
+    .cta-btn {
+        padding: 14px 30px;
+        font-size: 0.95rem;
+    }
+
+    /* Section 標題 */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+/* 手機直向 (max-width: 576px) */
+@media (max-width: 576px) {
+    .section {
+        padding: 40px 0;
+    }
+
+    /* Hero 區塊 - JS 會動態調整 padding-top */
+    .hero-content {
+        padding: 70px 15px 90px;
+        min-height: 100vh;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .typed-container {
+        font-size: 1rem;
+    }
+
+    .countdown-container {
+        gap: 8px;
+    }
+
+    .countdown-item {
+        min-width: 52px;
+        padding: 8px 10px;
+    }
+
+    .countdown-value {
+        font-size: 1.3rem;
+    }
+
+    .hero-cta {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        gap: 8px;
+    }
+
+        .hero-cta svg {
+            width: 18px;
+            height: 18px;
+        }
+
+    /* 會長區塊 - 確保文字不被遮擋 */
+    .profile-section::before {
+        height: 190px;
+        clip-path: ellipse(100% 100% at 50% 0%);
+    }
+
+    .president-card {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .president-image-wrapper {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 20px;
+    }
+
+    .president-name {
+        font-size: 1.25rem;
+        margin-bottom: 6px;
+    }
+
+    .president-title {
+        font-size: 0.8rem;
+    }
+
+    /* 資料卡片 */
+    .info-card {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .info-card-title {
+        font-size: 1.1rem;
+        gap: 8px;
+    }
+
+    .info-list li {
+        font-size: 0.9rem;
+    }
+
+    /* 四大機會 */
+    .opportunity-card {
+        padding: 20px 15px;
+    }
+
+        .opportunity-card h5 {
+            font-size: 1rem;
+        }
+
+        .opportunity-card p,
+        .opportunity-card ul {
+            font-size: 0.85rem;
+        }
+
+    /* 入會區塊 */
+    .join-card {
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .join-title {
+        font-size: 1.1rem;
+    }
+
+    /* 聯絡卡片 */
+    .contact-card {
+        padding: 20px 16px;
+    }
+
+    .contact-avatar {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+        margin-bottom: 14px;
+    }
+
+    .contact-card h5 {
+        font-size: 1rem;
+    }
+
+    .contact-role {
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+
+    /* Section 標題 */
+    .section-header {
+        margin-bottom: 35px;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+        .section-title::after {
+            width: 50px;
+            height: 3px;
+        }
+
+    .section-subtitle {
+        font-size: 0.85rem;
+    }
+
+    /* 介紹區塊 */
+    .intro-title {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+}
+
+/* 超小螢幕 (max-width: 400px) */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.35rem;
+    }
+
+    .christmas-badge {
+        padding: 6px 14px;
+    }
+
+        .christmas-badge span {
+            font-size: 0.7rem;
+        }
+
+    .countdown-item {
+        min-width: 48px;
+        padding: 6px 8px;
+    }
+
+    .countdown-value {
+        font-size: 1.15rem;
+    }
+
+    .countdown-label {
+        font-size: 0.6rem;
+    }
+
+    /* 會長區塊 - 超小螢幕 */
+    .profile-section::before {
+        height: 170px;
+    }
+
+    .president-card {
+        padding-top: 15px;
+    }
+
+    .president-image-wrapper {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 18px;
+    }
+
+    .president-name {
+        font-size: 1.15rem;
+    }
+
+    .president-title {
+        font-size: 0.75rem;
+    }
+
+    .info-card {
+        padding: 15px;
+    }
+
+    .contact-card {
+        padding: 18px 14px;
+    }
+}
+
+/* ===== 減少動畫（無障礙） ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .snowflake,
+    .light-bulb {
+        animation: none !important;
+    }
+}
+
+/* ===== 列印樣式 ===== */
+@media print {
+    .hero-section,
+    .snowflakes-container,
+    .christmas-lights,
+    .scroll-indicator,
+    .cta-section {
+        display: none !important;
+    }
+
+    .section {
+        padding: 20px 0;
+        page-break-inside: avoid;
+    }
+}

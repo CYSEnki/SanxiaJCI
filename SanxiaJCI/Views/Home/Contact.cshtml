@@ -1,137 +1,181 @@
-﻿@{
+﻿@*
+    JCI Sanxia - Contact Page
+    聖誕交接典禮特別版 2025/12/25
+    
+    檔案結構：
+    - Contact.cshtml (HTML 結構)
+    - jci-contact.css (樣式)
+    - jci-contact.js (互動效果)
+    - 需搭配 jci-christmas.css (共用 CSS 變數)
+*@
+@{
     ViewData["Title"] = "聯絡我們";
 }
-<!-- Start Contact -->
-<section class="section pt-5 mt-4">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 p-0">
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.7185106440065!2d121.36815077539349!3d24.941657542003654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681be088661757%3A0xfd26ed2bde1bc76b!2zMjM35paw5YyX5biC5LiJ5bO95Y2A5ZyL6Zqb5LiA6KGXOTbomZ8!5e0!3m2!1szh-TW!2stw!4v1750836130215!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
 
-    <div class="container mt-100 mt-60">
-        <div class="row align-items-center">
+<!-- 樣式載入 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="~/css/jci-christmas.css" rel="stylesheet" />
+<link href="~/css/jci-contact.css" rel="stylesheet" />
+
+<!-- Hero 區塊 -->
+<section class="contact-hero">
+    <div class="container">
+        <div class="contact-hero-content" data-aos="fade-up">
+            <div class="contact-hero-badge">
+                <span>📞 與我們聯繫</span>
+            </div>
+            <h1>聯絡我們</h1>
+            <p>加入三峽國際青年商會，與我們一同推動地方創生與青年影響力。歡迎透過以下方式與我們聯繫！</p>
+        </div>
+    </div>
+</section>
+
+<!-- 地圖區塊 -->
+<section class="map-section">
+    <div class="map-wrapper" data-aos="zoom-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.997605970649!2d121.37410012380533!3d24.932151474000168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681bed9d47b731%3A0x43e60ae21deaab4b!2zMjM35paw5YyX5biC5LiJ5bO95Y2A5Lit6I-v6LevMTHlt7cx6Jmf!5e0!3m2!1szh-TW!2stw!4v1765605449011!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<!-- 聯絡內容區塊 -->
+<section class="contact-content-section">
+    <div class="container">
+        <div class="row align-items-start">
             <!-- 表單 -->
-            <div class="col-lg-5 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0 order-2 order-md-1">
-                <div class="custom-form p-4 rounded shadow position-relative">
-                    <div id="form-overlay" class="position-absolute top-0 start-0 w-100 h-100 bg-white bg-opacity-75 d-none justify-content-center align-items-center z-3">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">處理中...</span>
-                        </div>
+            <div class="col-lg-5 col-md-6" data-aos="fade-right">
+                <div class="contact-form-card">
+                    <span class="christmas-decoration top-left">🎄</span>
+                    <span class="christmas-decoration bottom-right">⭐</span>
+
+                    <div class="form-overlay" id="form-overlay">
+                        <div class="form-spinner"></div>
                     </div>
-                    <form id="contact-form" method="post" onsubmit="return validateForm()">
-                        <p id="error-msg" class="text-danger"></p>
+
+                    <h3>寄送訊息</h3>
+
+                    <form id="contact-form" class="contact-form">
+                        <p id="error-msg" class="text-danger mb-3"></p>
                         <div id="simple-msg"></div>
+
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">您的姓名 <span class="text-danger">*</span></label>
-                                <input name="name" id="name" type="text" class="form-control" placeholder="姓名">
+                                <input name="name" id="name" type="text" class="form-control" placeholder="請輸入姓名">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">電子郵件 <span class="text-danger">*</span></label>
-                                <input name="email" id="email" type="email" class="form-control" placeholder="Email">
+                                <input name="email" id="email" type="email" class="form-control" placeholder="請輸入 Email">
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="form-label">職業</label>
-                                <input name="subject" id="subject" type="text" class="form-control" placeholder="職業">
+                                <input name="subject" id="subject" type="text" class="form-control" placeholder="請輸入您的職業">
                             </div>
-                            <div class="col-12 mb-3">
+                            <div class="col-12 mb-4">
                                 <label class="form-label">信件內容 <span class="text-danger">*</span></label>
-                                <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="請輸入內容"></textarea>
+                                <textarea name="comments" id="comments" rows="5" class="form-control" placeholder="請輸入您想詢問的內容..."></textarea>
                             </div>
-                            <div class="col-12 d-grid">
-                                <button type="submit" class="btn btn-primary">寄送郵件</button>
+                            <div class="col-12">
+                                <button type="submit" class="btn-submit">
+                                    寄送訊息
+                                </button>
                             </div>
                         </div>
                     </form>
                 </div>
-            </div><!--end col-->
+            </div>
 
-            <div class="col-lg-7 col-md-6 order-1 order-md-2">
-                <div class="title-heading ms-lg-4">
-                    <h4 class="mb-4">聯絡我們</h4>
-                    <p class="text-muted">加入三峽國際青年商會，與我們一同推動地方創生與青年影響力。我們致力於打造具行動力與社會責任感的青年平台，歡迎與我們聯繫！</p>
-                    <div class="contact-detail mt-3">
-                        <div class="icon mt-3 float-start">
-                            <i class="mdi mdi-email-variant text-primary mdi-36px me-3"></i>
+            <!-- 聯絡資訊 -->
+            <div class="col-lg-7 col-md-6" data-aos="fade-left">
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-header">
+                        <h2>保持聯繫</h2>
+                        <p>我們致力於打造具行動力與社會責任感的青年平台。無論您有任何問題或想加入我們，都歡迎透過以下方式聯繫！</p>
+                    </div>
+
+                    <!-- 電子郵件 -->
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
                         </div>
-                        <div class="content mt-3 overflow-hidden d-block">
-                            <h5 class="mb-0">電子郵件</h5>
-                            <a href="mailto:ray210160@gmail.com">ray210160@gmail.com</a>
+                        <div class="contact-item-content">
+                            <h5>電子郵件</h5>
+                            <a href="mailto:hang543125@gmail.com">hang543125@gmail.com</a>
                         </div>
                     </div>
 
-                    <div class="contact-detail mt-3">
-                        <div class="icon mt-3 float-start">
-                            <i class="mdi mdi-phone text-primary mdi-36px me-3"></i>
+                    <!-- 連絡電話 -->
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
                         </div>
-                        <div class="content mt-3 overflow-hidden d-block">
-                            <h5 class="mb-0">連絡電話</h5>
-                            <a href="tel:0903158257" class="text-muted">
-                                0903 158 257
-                            </a>
+                        <div class="contact-item-content">
+                            <h5>連絡電話</h5>
+                            <a href="tel:0900543125">0900-543-125</a>
                         </div>
                     </div>
 
-                    <div class="contact-detail mt-3">
-                        <div class="icon mt-3 float-start">
-                            <i class="mdi mdi-map-marker-outline text-primary mdi-36px me-3"></i>
+                    <!-- 地址 -->
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
                         </div>
-                        <div class="content mt-3 overflow-hidden d-block">
-                            <h5 class="mb-0">地址</h5>
-                            <a href="javascript:void(0)" class="text-muted">
-                                237新北市三峽區國際一街96號16樓之3
+                        <div class="contact-item-content">
+                            <h5>會館地址</h5>
+                            <p>新北市三峽區中華路11巷1號</p>
+                        </div>
+                    </div>
+
+                    <!-- 服務時間 -->
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h5>月例會時間</h5>
+                            <p>每月第一週禮拜五（以實際發文為準）</p>
+                        </div>
+                    </div>
+
+                    <!-- 社群連結 -->
+                    <div class="social-links">
+                        <h5>追蹤我們</h5>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/sanxiajci" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                                </svg>
                             </a>
+                            <a href="https://www.instagram.com/sanxia_jci?igsh=b2phaHZpNW5pN3Bz" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+                                </svg>
+                            </a>
+                          @*   <a href="https://line.me/ti/p/~@sanxiajci" target="_blank" rel="noopener noreferrer" class="social-icon" title="LINE">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+                                </svg>
+                            </a> *@
                         </div>
                     </div>
                 </div>
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
-</section><!--end section-->
-<!-- End contact -->
+            </div>
+        </div>
+    </div>
+</section>
 
-@section scripts{
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-            function validateForm() {
-            const name = $('#name').val().trim();
-            const email = $('#email').val().trim();
-            const subject = $('#subject').val().trim();
-            const comments = $('#comments').val().trim();
+@section scripts {
+    <!-- AOS 動畫庫 -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-            $('#error-msg').html('');
-            $('#simple-msg').html('');
-
-            if (!name || !email || !comments) {
-                $('#error-msg').html("請完整填寫必填欄位！");
-                return false;
-            }
-
-            $('#form-overlay').removeClass('d-none').addClass('d-flex');
-
-            $.ajax({
-                type: "POST",
-                url: "/Home/SendEmail",
-                contentType: "application/json",
-                data: JSON.stringify({ name, email, subject, message: comments }),
-                success: function (res) {
-                    $('#form-overlay').removeClass('d-flex').addClass('d-none');
-                    $('#simple-msg').html(`<div class="alert alert-success">${res.message || "郵件寄送成功！"}</div>`);
-                    $('#contact-form')[0].reset();
-                },
-                error: function (err) {
-                    $('#form-overlay').removeClass('d-flex').addClass('d-none');
-                    $('#simple-msg').html(`<div class="alert alert-danger">郵件寄送失敗：${err.responseJSON?.message || "請稍後再試。"}</div>`);
-                }
-            });
-
-            return false;
-        }
-    </script>
-
+    <!-- 頁面專屬腳本 -->
+    <script src="~/js/jci-contact.js"></script>
 }

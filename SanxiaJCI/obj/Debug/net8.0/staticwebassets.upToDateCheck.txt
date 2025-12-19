@@ -1,6 +1,7 @@
 wwwroot\css\bootstrap.min.css
 wwwroot\css\bootstrap.min.css.map
 wwwroot\css\businessmarketcss.css
+wwwroot\css\chapter-relations.css
 wwwroot\css\Chat.css
 wwwroot\css\colors\blue.css
 wwwroot\css\colors\cyan.css
@@ -2160,6 +2161,7 @@ wwwroot\css\fontawesome\webfonts\fa-v4compatibility.ttf
 wwwroot\css\fontawesome\webfonts\fa-v4compatibility.woff2
 wwwroot\css\introduction.css
 wwwroot\css\jcianimation.css
+wwwroot\css\magazine-reader.css
 wwwroot\css\materialdesignicons.css
 wwwroot\css\materialdesignicons.css.map
 wwwroot\css\materialdesignicons.min.css
@@ -2210,6 +2212,7 @@ wwwroot\images\blog\5.jpg
 wwwroot\images\blog\6.jpg
 wwwroot\images\blog\7.jpg
 wwwroot\images\blog\8.jpg
+wwwroot\images\east-asia-map.png
 wwwroot\images\favicon.ico
 wwwroot\images\HTML.png
 wwwroot\images\logo-dark.png
@@ -2217,6 +2220,8 @@ wwwroot\images\logo-dark_backup.png
 wwwroot\images\logo-icon-light.png
 wwwroot\images\logo-light.png
 wwwroot\images\sanxiajci\2025峽青組織圖.jpg
+wwwroot\images\sanxiajci\2026峽青組織圖.png
+wwwroot\images\sanxiajci\2026會長1.jpg
 wwwroot\images\sanxiajci\deskback_about.png
 wwwroot\images\sanxiajci\mobileback_about.png
 wwwroot\images\sanxiajci\三峽大家庭.jpg
@@ -2279,14 +2284,18 @@ wwwroot\images\青創小聚\青創小聚主視覺MobileBanner.png
 wwwroot\js\app.js
 wwwroot\js\bootstrap.bundle.min.js
 wwwroot\js\bootstrap.bundle.min.js.map
+wwwroot\js\chapter-relations.js
 wwwroot\js\contact.js
 wwwroot\js\Dify\Chat.js
 wwwroot\js\feather.min.js
 wwwroot\js\feather.min.js.map
 wwwroot\js\gallery.init.js
 wwwroot\js\jarallax.js
+wwwroot\js\jci-christmas.js
+wwwroot\js\jci-contact.js
 wwwroot\js\jquery.easing.min.js
 wwwroot\js\jquery.min.js
+wwwroot\js\magazine-reader.js
 wwwroot\js\quiz.js
 wwwroot\js\scrollspy.min.js
 wwwroot\js\shuffle.min.js
@@ -2387,3 +2396,5 @@ wwwroot\scss\_team.scss
 wwwroot\scss\_testi.scss
 wwwroot\scss\_variables.scss
 wwwroot\scss\_work.scss
+wwwroot\css\jci-christmas.css
+wwwroot\css\jci-contact.css

@@ -1,58 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Source\\SanxiaJCI\\",
+  "WorkspaceRootPath": "C:\\Source\\SanxiaJCI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\views\\businessmarket\\introduction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\businessmarket\\introduction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\wwwroot\\css\\jci-contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\jci-contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\css\\introduction.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\introduction.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\wwwroot\\js\\jci-contact.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\js\\jci-contact.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\wwwroot\\js\\jci-christmas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\js\\jci-christmas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\wwwroot\\css\\jci-christmas.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\jci-christmas.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\controllers\\businessmarketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\controllers\\businessmarketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\views\\shared\\_navigation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\shared\\_navigation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\views\\businessmarket\\game.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\businessmarket\\game.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\js\\dify\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\js\\dify\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\views\\businessmarket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\businessmarket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|d:\\source\\sanxiajci\\sanxiajci\\wwwroot\\js\\quiz.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\js\\quiz.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\views\\home\\book_2026.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\views\\home\\book_2026.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\wwwroot\\css\\jcianimation.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\jcianimation.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\wwwroot\\js\\magazine-reader.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\js\\magazine-reader.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\wwwroot\\css\\magazine-reader.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\wwwroot\\css\\magazine-reader.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|c:\\source\\sanxiajci\\sanxiajci\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F2091DE5-94C4-4A11-8297-1B46E5AC7FB2}|SanxiaJCI\\SanxiaJCI.csproj|solutionrelative:sanxiajci\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,28 +66,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Program.cs",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Program.cs",
               "RelativeDocumentMoniker": "SanxiaJCI\\Program.cs",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Program.cs",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Program.cs",
               "RelativeToolTip": "SanxiaJCI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-02T07:32:39.981Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\appsettings.json",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\appsettings.json",
               "RelativeDocumentMoniker": "SanxiaJCI\\appsettings.json",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\appsettings.json",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\appsettings.json",
               "RelativeToolTip": "SanxiaJCI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -92,141 +97,162 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Chat.js",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
-              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
-              "RelativeToolTip": "SanxiaJCI\\wwwroot\\js\\Dify\\Chat.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-07-25T16:12:24.92Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Chat.css",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\Chat.css",
-              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\Chat.css",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\Chat.css",
-              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\Chat.css",
-              "ViewState": "AgIAAJUBAAAAAAAAAAAAALQBAAAAAAAAAAAAAA==",
+              "Title": "Book_2026.cshtml",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Home\\Book_2026.cshtml",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\Home\\Book_2026.cshtml",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Home\\Book_2026.cshtml",
+              "RelativeToolTip": "SanxiaJCI\\Views\\Home\\Book_2026.cshtml",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAgwKUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T18:50:29.476Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "magazine-reader.js",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\magazine-reader.js",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\js\\magazine-reader.js",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\magazine-reader.js",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\js\\magazine-reader.js",
+              "ViewState": "AgIAAA0CAAAAAAAAAAAAwCwCAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-12T18:50:45.031Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "magazine-reader.css",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\magazine-reader.css",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\magazine-reader.css",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\magazine-reader.css",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\magazine-reader.css",
+              "ViewState": "AgIAAP8EAAAAAAAAAAAuwCAFAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-25T16:25:35.222Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Game.cshtml",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
-              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
-              "RelativeToolTip": "SanxiaJCI\\Views\\BusinessMarket\\Game.cshtml",
-              "ViewState": "AgIAAIUBAAAAAAAAAAAAAHYAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:02:29.373Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "introduction.cshtml",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\introduction.cshtml",
-              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\BusinessMarket\\introduction.cshtml",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\introduction.cshtml",
-              "RelativeToolTip": "SanxiaJCI\\Views\\BusinessMarket\\introduction.cshtml",
-              "ViewState": "AgIAAGYCAAAAAAAAAAAAAIcCAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-28T19:19:55.543Z",
+              "WhenOpened": "2025-12-13T04:36:37.933Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "introduction.css",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\introduction.css",
-              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\introduction.css",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\introduction.css",
-              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\introduction.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Title": "jci-contact.js",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\jci-contact.js",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\js\\jci-contact.js",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\jci-contact.js",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\js\\jci-contact.js",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAwwDIBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-13T07:18:40.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "jci-christmas.js",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\jci-christmas.js",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\js\\jci-christmas.js",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\jci-christmas.js",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\js\\jci-christmas.js",
+              "ViewState": "AgIAAJABAAAAAAAAAAAAAKwBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-13T07:18:09.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "jci-contact.css",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\jci-contact.css",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\jci-contact.css",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\jci-contact.css",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\jci-contact.css",
+              "ViewState": "AgIAACkCAAAAAAAAAAAowEICAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-28T19:24:15.309Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MeetingController.cs",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\MeetingController.cs",
-              "RelativeDocumentMoniker": "SanxiaJCI\\Controllers\\MeetingController.cs",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\MeetingController.cs",
-              "RelativeToolTip": "SanxiaJCI\\Controllers\\MeetingController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T16:57:47.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Index.cshtml",
-              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\BusinessMarket\\Index.cshtml",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\BusinessMarket\\Index.cshtml",
-              "RelativeToolTip": "SanxiaJCI\\Views\\BusinessMarket\\Index.cshtml",
-              "ViewState": "AgIAAAwCAAAAAAAAAAAQwC4CAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-02T07:37:27.34Z"
+              "WhenOpened": "2025-12-13T06:09:18.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "SanxiaJCI\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "SanxiaJCI\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T07:28:28.863Z"
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SanxiaJCI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T06:02:46.305Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BusinessMarketController.cs",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\BusinessMarketController.cs",
-              "RelativeDocumentMoniker": "SanxiaJCI\\Controllers\\BusinessMarketController.cs",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Controllers\\BusinessMarketController.cs",
-              "RelativeToolTip": "SanxiaJCI\\Controllers\\BusinessMarketController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwLMBAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T20:24:22.668Z"
+              "DocumentIndex": 7,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Home\\Contact.cshtml",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\Home\\Contact.cshtml",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Home\\Contact.cshtml",
+              "RelativeToolTip": "SanxiaJCI\\Views\\Home\\Contact.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwCYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T05:27:07.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "jci-christmas.css",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\jci-christmas.css",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\jci-christmas.css",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\jci-christmas.css",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\jci-christmas.css",
+              "ViewState": "AgIAAK8FAAAAAAAAAAAowMcFAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-13T05:22:25.484Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "About.cshtml",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Home\\About.cshtml",
-              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\Home\\About.cshtml",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Home\\About.cshtml",
-              "RelativeToolTip": "SanxiaJCI\\Views\\Home\\About.cshtml",
-              "ViewState": "AgIAAO4AAAAAAAAAAAAkwN0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-02T07:38:16.8Z"
+              "Title": "jcianimation.css",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\jcianimation.css",
+              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\css\\jcianimation.css",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\css\\jcianimation.css",
+              "RelativeToolTip": "SanxiaJCI\\wwwroot\\css\\jcianimation.css",
+              "ViewState": "AgIAAEoCAAAAAAAAAAAuwGsCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-13T04:56:29.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "quiz.js",
-              "DocumentMoniker": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\quiz.js",
-              "RelativeDocumentMoniker": "SanxiaJCI\\wwwroot\\js\\quiz.js",
-              "ToolTip": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\wwwroot\\js\\quiz.js",
-              "RelativeToolTip": "SanxiaJCI\\wwwroot\\js\\quiz.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-07-25T18:25:03.767Z"
+              "DocumentIndex": 6,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "SanxiaJCI\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T04:37:58.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Navigation.cshtml",
+              "DocumentMoniker": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Shared\\_Navigation.cshtml",
+              "RelativeDocumentMoniker": "SanxiaJCI\\Views\\Shared\\_Navigation.cshtml",
+              "ToolTip": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\Views\\Shared\\_Navigation.cshtml",
+              "RelativeToolTip": "SanxiaJCI\\Views\\Shared\\_Navigation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T04:38:12.987Z",
+              "EditorCaption": ""
             }
           ]
         }

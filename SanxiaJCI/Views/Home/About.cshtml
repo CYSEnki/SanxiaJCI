@@ -1,310 +1,378 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    JCI Sanxia - About Page
+    聖誕交接典禮特別版 2025/12/25
+    
+    檔案結構：
+    - About.cshtml (HTML 結構)
+    - jci-christmas.css (樣式)
+    - jci-christmas.js (互動效果)
 *@
 @{
 }
 
-<!-- Slider -->
+<!-- 樣式載入 -->
 <link rel="stylesheet" href="~/css/tiny-slider.css" />
-<!-- Tobii Lightbox -->
 <link href="~/css/tobii.min.css" rel="stylesheet" type="text/css" />
-<!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<link href="~/css/jcianimation.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="~/css/jci-christmas.css" rel="stylesheet" />
 
-<style>
-    .hero-background {
-        position: relative;
-        background: url('/images/sanxiajci/deskback_about.png') left center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: white; /* 確保背景整體不透明 */
-    }
-        .hero-background::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .hero-background .container {
-            position: relative;
-            z-index: 2;
-        }
-
-    .card {
-        background-color: #ffffff;
-        border-radius: 1rem;
-        border: none;
-    }
-
-        .card h4 {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .card ul li {
-            padding: 4px 0;
-            color: #444;
-        }
-
-    a {
-        color: #0d6efd;
-        text-decoration: none;
-    }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-    .rounded-circle {
-        border-radius: 50% !important;
-    }
-
-    .text-white{
-        color: white;
-    }
-
-    .btn-white {
-        color: #293a57;
-        background-color: white;
-        border: 1px solid #293a57;
-        transition: all 0.4s ease-in-out;
-    }
-
-        /* 滑鼠移入時進行顏色與背景顏色的反轉 */
-        .btn-white:hover {
-            color: white;
-            background-color: #293a57;
-        }
-</style>
-
-<!-- Hero Start -->
-@* <section class="bg-half-260 d-table w-100 hero-background">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 mt-5">
-                <div class="title-heading">
-                    <h2>歡迎來到三峽國際青年商會</h2>
-                    <h2 class="heading">我們是 <span class="typed-jci text-primary"></span></h2>
-                    <p class="text-muted para-desc">在這裡，18 至 40 歲的青年齊聚一堂，共同參與國際交流、社會服務與自我成長，實踐領導與影響力。</p>
-                    <div class="mt-4">
-                        <a asp-action="Contact" asp-controller="Home" class="btn btn-primary">立即加入我們</a>
-                    </div>
-                </div>
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
-</section><!--end section--> *@
-<!-- Hero End -->
-<!-- Hero Start -->
-<section class="position-relative w-100 vh-100 overflow-hidden">
+<!-- Hero Section -->
+<section class="hero-section">
     <!-- 背景影片 -->
-    <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+    <video autoplay muted loop playsinline class="hero-video" poster="/images/sanxiajci/hero-poster.jpg">
         <source src="https://storage.googleapis.com/sanxiajci/sanxiajci/hero-video.mp4" type="video/mp4">
-        您的瀏覽器不支援影片播放
     </video>
 
-    <!-- 半透明遮罩 -->
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+    <!-- 遮罩 -->
+    @* <div class="hero-overlay"></div> *@
+
+    <!-- 聖誕燈串 -->
+    <div class="christmas-lights" id="christmas-lights"></div>
+
+    <!-- 雪花效果容器 -->
+    <div class="snowflakes-container" id="snowflakes-container"></div>
 
     <!-- Hero 內容 -->
-    <div class="container position-relative z-1 h-100 d-flex align-items-center justify-content-center text-center text-white">
-        <div class="row">
-            <div class="col-12">
-                <div class="title-heading">
-                    <h2>歡迎來到三峽國際青年商會</h2>
-                    <h2 class="heading">我們是 <span class="typed-jci text-white"></span></h2>
-                    <p class="text-light para-desc">
-                        在這裡，18 至 40 歲的青年齊聚一堂，共同參與國際交流、社會服務與自我成長，實踐領導與影響力。
-                    </p>
-                    <div class="mt-4">
-                        <a asp-action="Contact" asp-controller="Home" class="btn btn-white">立即加入我們</a>
+    <div class="hero-content">
+        <!-- 聖誕徽章 -->
+        <div class="christmas-badge">
+            <span>🎄 2025 聖誕交接典禮 🎄</span>
+        </div>
+
+        <h1 class="hero-title">三峽國際青年商會</h1>
+        @* <p class="hero-subtitle">JCI Sanxia · 45th Anniversary</p> *@
+
+        <div class="typed-container">
+            我們是 <span class="typed-jci"></span>
+        </div>
+
+        <p class="hero-description">
+            在這裡，18 至 40 歲的青年齊聚一堂，<br>
+            共同參與國際交流、社會服務與自我成長，實踐領導與影響力。
+        </p>
+
+        <!-- 倒數計時 -->
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <div class="countdown-value" id="countdown-days">00</div>
+                <div class="countdown-label">天</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="countdown-hours">00</div>
+                <div class="countdown-label">時</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="countdown-minutes">00</div>
+                <div class="countdown-label">分</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="countdown-seconds">00</div>
+                <div class="countdown-label">秒</div>
+            </div>
+        </div>
+
+        <a asp-action="Contact" asp-controller="Home" class="hero-cta">
+            <span>立即加入我們</span>
+            <svg viewBox="0 0 24 24" width="20" height="20">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- 滾動指示 -->
+    <div class="scroll-indicator">
+        <svg viewBox="0 0 24 24" width="28" height="28">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="currentColor" />
+        </svg>
+    </div>
+</section>
+
+<!-- 介紹區塊 -->
+<section class="section intro-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">JCI 新北市三峽國際青年商會</h2>
+            <p class="section-subtitle">Sanxia Junior Chamber International · Since 1981</p>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                <h4 class="intro-title">青商會組織架構</h4>
+                <p class="intro-text">
+                    國際青年商會（簡稱JCI）是由18~40歲的青年人所組成的國際性NGO組織，主要目的是提供發展領導才能，培養社會責任感及邁進成就，並廣至世界的舞台上。
+                </p>
+                <p class="intro-text">
+                    JCI自1952年引進台灣至今，已發展成台灣指標性國際四大社團，分佈在全台各縣市及鄉鎮擁有近150個分會、7000多位會員及超過10萬位資深的OB會員。
+                </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                <h4 class="intro-title">與其他國際性社團的區別</h4>
+                <p class="intro-text">
+                    我們不僅出心力在參與國際事務及社會服務，青商會成員更追求「透過訓練及機會創造」養成各領域的未來領導人。
+                </p>
+                <p class="intro-text">
+                    同時青商針對發現與解決在地問題，成為地區與世界的【永續影響力】，只要一個積極公民的參與即可改變世界，歡迎即刻加入成為積極公民！
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 會長與基本資料區塊 -->
+<section class="section profile-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- 會長照片 -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="president-card" data-aos="fade-up">
+                    <div class="president-image-wrapper">
+                        <img src="/images/sanxiajci/2026會長1.jpg"
+                             alt="2025年會長 林昀叡"
+                             class="president-image"
+                             loading="lazy">
+                    </div>
+                    <h3 class="president-name">曾華亨</h3>
+                    <p class="president-title">2026年 會長</p>
+                </div>
+            </div>
+
+            <!-- 基本資料卡片 -->
+            <div class="col-lg-8">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="info-card-title">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        三峽青年商會基本資料
+                    </h4>
+                    <ul class="info-list">
+                        <li><strong>創會日期</strong>1981年08月27日（成立第45年）</li>
+                        <li><strong>創會會長</strong>林新欽</li>
+                        <li><strong>成立次序</strong>全國第98個分會，隸屬新北市</li>
+                        <li><strong>輔導母會</strong>新北市土城分會</li>
+                        <li><strong>會員人數</strong>41人</li>
+                        <li><strong>秘書人員</strong>侯志伽</li>
+                        <li><strong>會館地址</strong>新北市三峽區中華路11巷1號</li>
+                        <li><strong>會館電話</strong>0900-543-125</li>
+                        <li><strong>電子信箱</strong><a href="mailto:hang543125@gmail.com">hang543125@gmail.com</a></li>
+                        <li><strong>月會時間</strong>每月第一週禮拜五（以實際發文為準）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 組織圖區塊 -->
+<section class="section org-chart-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">組織架構圖</h2>
+            <p class="section-subtitle">2026年度組織編制</p>
+        </div>
+
+        <div class="org-chart-wrapper" data-aos="zoom-in" data-aos-delay="100">
+            <img src="~/images/sanxiajci/2026峽青組織圖.png"
+                 alt="2026峽青組織圖"
+                 loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- 四大機會區塊 -->
+<section class="section opportunities-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">青商四大機會</h2>
+            <p class="section-subtitle">Opportunities for Growth</p>
+        </div>
+
+        <div class="row g-4 mt-3">
+            <!-- 個人機會 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </div>
+                    <h5>個人機會</h5>
+                    <p>藉由教育訓練課程、領導機會、志工活動，提升自己的專業能力與領導力。</p>
+                </div>
+            </div>
+
+            <!-- 社區機會 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                    </div>
+                    <h5>社區機會</h5>
+                    <ul>
+                        <li>參與公益活動</li>
+                        <li>兒童安全教育</li>
+                        <li>關懷弱勢族群</li>
+                        <li>提升社會參與</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 國際機會 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                    </div>
+                    <h5>國際機會</h5>
+                    <ul>
+                        <li>國際交流會議</li>
+                        <li>世界大會參與</li>
+                        <li>姐妹會交流</li>
+                        <li>國際志工體驗</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 商業交流 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
+                        </svg>
+                    </div>
+                    <h5>商業交流</h5>
+                    <p>與全台7000名會員及世界超過20萬名會員共同交流，建立跨業合作平台。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 入會條件區塊 -->
+<section class="section join-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="join-card" data-aos="fade-up">
+                    <div class="section-header">
+                        <h2 class="section-title">入會條件與資格</h2>
+                        <p class="section-subtitle">歡迎志同道合的青年加入我們的行列</p>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h4 class="join-title">入會資格</h4>
+                            <ul class="join-requirements">
+                                <li>贊同本會宗旨並自願服務本會信條</li>
+                                <li>年滿18歲至40歲男女青年</li>
+                                <li>有正當職業、身心健康、思想純正</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="join-title">費用說明</h4>
+                            <div class="fee-info">
+                                <p>📌 加入本會須見習三個月</p>
+                                <p>📌 見習期間繳納見習費 <strong>3,000 元</strong></p>
+                                <p>📌 見習滿三個月可申請正式會員</p>
+                                <p>📌 年會費 <strong>15,000 元</strong>（見習費可折抵）</p>
+                                <p>📌 見習期間應列席至少一次以上例會</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Hero End -->
 
-
-
-<div class="container" data-aos="fade-up">
-    <h2 class="m-3">JCI 新北市三峽國際青年商會</h2>
-    <h4 style="padding-top:0px;">Sanxia Junior Chamber International</h4>
-    
-</div>
-<!-- 商會基本資料區塊 -->
-<div class="container py-3" data-aos="fade-up">
-    <div class="row align-items-center">
-        <!-- 左側圖片 -->
-        <div class="col-md-4 text-center mb-4 mb-md-0">
-            <img src="/images/sanxiajci/會長1_v1.png" alt="2025年會長 林昀叡"
-                 class="img-fluid rounded-circle shadow" style="width: 200px; height: 200px; object-fit: cover;">
-            <h5 class="mt-3 fw-bold">2025年會長 林昀叡</h5>
+<!-- 聯絡人區塊 -->
+<section class="section contact-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">聯絡我們</h2>
+            <p class="section-subtitle">歡迎來電或來信洽詢</p>
         </div>
 
-        <!-- 右側卡片 -->
-        <div class="col-md-8">
-            <div class="card shadow-sm rounded-4 p-4">
-                <h4 class="mb-3">三峽青年商會基本資料</h4>
-                <ul class="list-unstyled mb-0">
-                    <li><strong>創會日期：</strong>1981年08月27日（成立第45年）</li>
-                    <li><strong>創會會長：</strong>林新欽</li>
-                    <li><strong>成立次序：</strong>全國第98個分會，隸屬新北市</li>
-                    <li><strong>輔導母會：</strong>新北市土城</li>
-                    <li><strong>會員人數：</strong>41人</li>
-                    <li><strong>秘書人員：</strong>侯志伽</li>
-                    <li><strong>會館地址：</strong>新北市三峽區國際一街96號16樓之3</li>
-                    <li><strong>會館電話：</strong>0988-058-298</li>
-                    <li><strong>電子信箱：</strong><a href="mailto:ray210160@gmail.com">ray210160@gmail.com</a></li>
-                    <li><strong>月會時間：</strong>每月第一週禮拜五（以實際發文為準）</li>
-                </ul>
+        <div class="row g-4 mt-3">
+            <!-- 會長 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-card">
+                    <div class="contact-avatar">👑</div>
+                    <h5>曾華亨</h5>
+                    <p class="contact-role">會長</p>
+                    <a href="tel:0900543125" class="contact-phone">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
+                        0900-543-125
+                    </a>
+                </div>
+            </div>
+
+            <!-- 秘書 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-card">
+                    <div class="contact-avatar">📋</div>
+                    <h5>侯志伽</h5>
+                    <p class="contact-role">秘書</p>
+                    <a href="tel:0955318319" class="contact-phone">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
+                        0955-318-319
+                    </a>
+                </div>
+            </div>
+
+            <!-- 會擴理事 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="contact-card">
+                    <div class="contact-avatar">🤝</div>
+                    <h5>張鈞皓</h5>
+                    <p class="contact-role">會擴理事</p>
+                    <a href="tel:0909237507" class="contact-phone">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
+                        0909-237-507
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container pb-5" data-aos="fade-up">
-    <div class="row align-items-center mt-4 mt-sm-0">
-        <div class="col-12">
-            <img src="~/images//sanxiajci/2025峽青組織圖.jpg" class="img-fluid rounded shadow" alt="">
-        </div><!--end col-->
-    </div><!--end row-->
-</div>
+</section>
 
-<div class="container py-5" data-aos="fade-up">
-    <h2 class="mb-3">青商會組織架構</h2>
-    <p>國際青年商會（簡稱JCI）是由18~40歲的青年人所組成的國際性NGO組織，主要目的是提供發展領導才能，培養社會責任感及邁進成就，並廣至世界的舞台上。</p>
-    <p>JCI自1952年引進台灣至今，已發展成台灣指標性國際四大社團，分佈在全台各縣市及鄉鎮擁有近150個分會、7000多位會員及超過10萬位資深的OB會員。JCI每年都舉辦超過千場活動、接近20萬名會員在全世界120個國家、地區活耀地參與各項活動。為了永續發展及更美好的未來盡心盡力，讓世界更美好。</p>
-</div>
-
-<div class="container py-5" data-aos="fade-up">
-    <h2 class="mb-3">青商會與其他國際性社團分別在哪裡？</h2>
-    <p>我們不僅出心力在參與國際事務及社會服務，青商會成員更追求「透過訓練及機會創造」養成各領域的未來領導人。同時青商針對發現與解決在地問題，成為地區與世界的【永續影響力】，只要一個積極公民的參與即可改變世界，歡迎即刻加入成為積極公民！</p>
-</div>
-
-<div class="container py-5" data-aos="fade-up">
-    <h2 class="mb-3">青商四大機會 Opportunity</h2>
-    <div class="row">
-        <div class="col-md-3" data-aos="fade-left" data-aos-delay="100">
-            <div class="card p-3">
-                <h5>個人機會</h5>
-                <p>藉由教育訓練課程、領導機會、志工活動，提升自己。</p>
-            </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-left" data-aos-delay="200">
-            <div class="card p-3">
-                <h5>社區機會</h5>
-                <ul>
-                    <li>參與公益活動</li>
-                    <li>兒童安全教育</li>
-                    <li>關懷弱勢族群</li>
-                    <li>提升在地社會參與與責任</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-left" data-aos-delay="300">
-            <div class="card p-3">
-                <h5>國際機會</h5>
-                <ul>
-                    <li>國際交流及友好會議</li>
-                    <li>世界大會與區域會議</li>
-                    <li>姐妹會交流</li>
-                    <li>國際志工與學習經驗</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-left" data-aos-delay="400">
-            <div class="card p-3">
-                <h5>商業交流</h5>
-                <p>各分會20~40歲以上青年企業家、全台7000名會員及世界超過20萬名會員共同交流，建立跨業合作平台。</p>
-            </div>
+<!-- CTA 區塊 -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content" data-aos="zoom-in">
+            <h2>🎄 聖誕佳節，與我們一起創造改變 🎄</h2>
+            <p>加入三峽國際青年商會，與來自各行各業的青年領袖一同成長，在服務中學習，在交流中茁壯。</p>
+            <a asp-action="Contact" asp-controller="Home" class="cta-btn">
+                <span>立即報名加入</span>
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor" />
+                </svg>
+            </a>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container py-5" data-aos="fade-up">
-    <h2 class="mb-3">入會條件與資格</h2>
-    <ul>
-        <li>贊同本會宗旨並自願服務本會信條</li>
-        <li>年滿18歲至40歲男女青年</li>
-        <li>有正當職業、身心健康、思想純正</li>
-    </ul>
-    <p>
-        加入本會須見習三個月<br>
-        見習會員於見習期間繳納為見習費3000元整<br>
-        見習會員應於滿三個月內申請為正式會員，且應列席至少一次以上例會，年會費為15000元整。（見習費可折抵年費）
-    </p>
-</div>
-
-<div class="container py-5" data-aos="fade-up">
-    <h2 class="mb-3">聯絡人資訊</h2>
-    <ul>
-        <li><strong>會長</strong>：林昀叡 0903-158257</li>
-        <li><strong>秘書</strong>：侯志伽 0955-318319</li>
-        <li><strong>會擴主委</strong>：周畯竑 0928-219678</li>
-    </ul>
-</div>
-
-
-@section scripts{
-    <!-- Slider -->
-    <script src="~/js/tiny-slider.js "></script>
-    <script src="~/js/tiny-slider-init.js "></script>
-    <!-- Shuffle and tobii filter plugin -->
+@section scripts {
+    <!-- 核心腳本 -->
+    <script src="~/js/tiny-slider.js"></script>
+    <script src="~/js/tiny-slider-init.js"></script>
     <script src="~/js/tobii.min.js"></script>
-    @* AOS *@
+
+    <!-- AOS 動畫庫 -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
 
-                $(function () {
-          const phrases = [
-            "綠色・傳承・熱情",
-            "三峽青商",
-            // "正在改變世界的一群人"
-          ];
-
-          const typedElement = document.querySelector(".typed-jci");
-          let phraseIndex = 0;
-          let charIndex = 0;
-
-          function typeText() {
-            if (!typedElement) return;
-
-            if (charIndex < phrases[phraseIndex].length) {
-              typedElement.textContent += phrases[phraseIndex].charAt(charIndex);
-              charIndex++;
-              setTimeout(typeText, 120);
-            } else {
-              setTimeout(() => {
-                eraseText();
-              }, 1800);
-            }
-          }
-
-          function eraseText() {
-            if (charIndex > 0) {
-              typedElement.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
-              charIndex--;
-              setTimeout(eraseText, 50);
-            } else {
-              phraseIndex = (phraseIndex + 1) % phrases.length;
-              setTimeout(typeText, 400);
-            }
-          }
-
-          typeText();
-        });
-
-
-        AOS.init({
-          duration: 1200,
-          once: true
-        });
-
-    </script>
-
+    <!-- 頁面專屬腳本（放在最後，使用 defer 概念） -->
+    <script src="~/js/jci-christmas.js"></script>
 }

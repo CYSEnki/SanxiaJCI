@@ -1,72 +1,619 @@
-﻿body {
+﻿/**
+ * JCI Sanxia - Animation & Responsive Styles
+ * 聖誕交接典禮特別版 2025/12/25
+ */
+
+/* ===== 基礎設定 ===== */
+body {
     font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+/* ===== AOS 動畫增強 ===== */
 .fade-up {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-down {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-left {
     opacity: 0;
-    transform: translateX(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .aos-animate.fade-up,
-.aos-animate.fade-left {
+.aos-animate.fade-down {
     opacity: 1;
     transform: translateY(0);
 }
 
-.aos-animate.fade-left {
+.aos-animate.fade-left,
+.aos-animate.fade-right {
+    opacity: 1;
     transform: translateX(0);
 }
 
-@media (max-width: 996px) {
-    .hero-background {
-        background-image: url('/images/sanxiajci/mobileback_about.png') !important; /* 換成手機背景圖 */
-        background-position: left calc(0% + 30px) !important;
-        background-size: cover !important;
+.aos-animate.zoom-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===== 特殊動畫效果 ===== */
+
+/* 浮動動畫 */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
     }
 
-    /* 所有標題字往下縮小一級 */
-    h1 {
-        font-size: 2rem;
+    50% {
+        transform: translateY(-10px);
     }
-    /* 原本大標縮小 */
-    h2 {
-        font-size: 1.75rem;
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* 脈動動畫 */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    h3 {
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* 閃爍動畫 */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.shimmer-animation {
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* 旋轉動畫 */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-animation {
+    animation: rotate 20s linear infinite;
+}
+
+/* 漸層文字動畫 */
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(270deg, #1a5f7a, #d4af37, #c41e3a, #1a5f7a);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 5s ease infinite;
+}
+
+/* ===== 聖誕特效 ===== */
+
+/* 雪花飄落增強 */
+@keyframes snowfallEnhanced {
+    0% {
+        transform: translateY(-10px) translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateY(25vh) translateX(15px) rotate(90deg);
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(-10px) rotate(180deg);
+        opacity: 0.8;
+    }
+
+    75% {
+        transform: translateY(75vh) translateX(20px) rotate(270deg);
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(0) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+/* 星星閃爍 */
+@keyframes starTwinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.star-twinkle {
+    animation: starTwinkle 2s ease-in-out infinite;
+}
+
+/* 禮物搖晃 */
+@keyframes giftShake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+.gift-shake {
+    animation: giftShake 0.5s ease-in-out infinite;
+}
+
+/* ===== 滾動效果 ===== */
+
+/* 視差滾動 */
+.parallax {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* 滾動顯示 */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+    .scroll-reveal.revealed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+/* ===== 互動效果 ===== */
+
+/* 按鈕波紋效果 */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+    .ripple::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        border-radius: 100%;
+        transform: scale(1, 1) translate(-50%);
+        transform-origin: 50% 50%;
+    }
+
+    .ripple:active::after {
+        animation: rippleEffect 0.5s ease-out;
+    }
+
+@keyframes rippleEffect {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(40, 40);
+        opacity: 0;
+    }
+}
+
+/* 卡片懸浮效果 */
+.hover-lift {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+    .hover-lift:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+/* 圖片縮放效果 */
+.hover-zoom {
+    overflow: hidden;
+}
+
+    .hover-zoom img {
+        transition: transform 0.5s ease;
+    }
+
+    .hover-zoom:hover img {
+        transform: scale(1.1);
+    }
+
+/* ===== 文字動畫 ===== */
+
+/* 逐字顯示 */
+.text-reveal {
+    opacity: 0;
+    animation: textReveal 0.5s ease forwards;
+}
+
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 打字游標 */
+.typing-cursor {
+    border-right: 3px solid currentColor;
+    animation: cursorBlink 0.8s step-end infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 100% {
+        border-color: currentColor;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* ===== 載入動畫 ===== */
+
+/* 骨架屏閃爍 */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeletonLoading 1.5s infinite;
+}
+
+@keyframes skeletonLoading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* 旋轉載入 */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(26, 95, 122, 0.1);
+    border-top-color: #1a5f7a;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== 響應式設計 ===== */
+
+@media (max-width: 1200px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* 標題縮小 */
+    h1, .h1 {
+        font-size: 2.2rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.8rem;
+    }
+
+    h3, .h3 {
         font-size: 1.5rem;
     }
 
-    h4 {
+    h4, .h4 {
+        font-size: 1.25rem;
+    }
+
+    h5, .h5 {
+        font-size: 1.1rem;
+    }
+
+    h6, .h6 {
         font-size: 1rem;
     }
 
-    h5 {
-        font-size: 1rem;
-    }
-
-    h6 {
-        font-size: 1rem;
-    }
-
-    /* 文字區塊也可跟著微調字體 */
+    /* 文字區塊調整 */
     p, .para-desc {
         font-size: 0.95rem;
+        line-height: 1.7;
     }
 
-    /* 可選：按鈕縮小、間距緊縮 */
+    /* 按鈕調整 */
+    .btn {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+
+    /* 間距調整 */
+    .section {
+        padding: 60px 0;
+    }
+
+    /* 減少動畫複雜度 */
+    .float-animation {
+        animation-duration: 4s;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 更小的標題 */
+    h1, .h1 {
+        font-size: 1.8rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.5rem;
+    }
+
+    h3, .h3 {
+        font-size: 1.25rem;
+    }
+
+    h4, .h4 {
+        font-size: 1.1rem;
+    }
+
+    h5, .h5 {
+        font-size: 1rem;
+    }
+
+    /* 文字調整 */
+    p, .para-desc {
+        font-size: 0.9rem;
+    }
+
+    /* 按鈕調整 */
     .btn {
         font-size: 0.9rem;
-        padding: 8px 16px;
+        padding: 8px 18px;
     }
 
-    .mt-4 {
+    /* 間距調整 */
+    .section {
+        padding: 50px 0;
+    }
+
+    .mt-4, .my-4 {
         margin-top: 1rem !important;
     }
+
+    .mb-4, .my-4 {
+        margin-bottom: 1rem !important;
+    }
+
+    /* 禁用部分複雜動畫以提升效能 */
+    .parallax {
+        transform: none !important;
+    }
+
+    /* 簡化懸浮效果 */
+    .hover-lift:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 576px) {
+    /* 最小螢幕標題 */
+    h1, .h1 {
+        font-size: 1.5rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.3rem;
+    }
+
+    h3, .h3 {
+        font-size: 1.15rem;
+    }
+
+    /* 文字 */
+    p, .para-desc {
+        font-size: 0.85rem;
+    }
+
+    /* 容器 padding */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* 間距 */
+    .section {
+        padding: 40px 0;
+    }
+
+    /* 完全禁用部分動畫 */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+/* ===== 橫向模式 ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero-section {
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .countdown-container {
+        margin-bottom: 20px;
+    }
+
+    .countdown-item {
+        padding: 8px 12px;
+        min-width: 50px;
+    }
+
+    .countdown-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* ===== 高對比度模式 ===== */
+@media (prefers-contrast: high) {
+    .opportunity-card,
+    .info-card,
+    .contact-card {
+        border: 2px solid currentColor;
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* ===== 深色模式支援（可選） ===== */
+@media (prefers-color-scheme: dark) {
+    /* 如果需要深色模式，可以在這裡添加樣式 */
+}
+
+/* ===== 列印樣式 ===== */
+@media print {
+    .hero-section,
+    .snowflakes,
+    .christmas-lights,
+    .scroll-indicator,
+    .cta-section {
+        display: none !important;
+    }
+
+    .section {
+        padding: 20px 0;
+        page-break-inside: avoid;
+    }
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ===== 輔助類別 ===== */
+
+/* 隱藏但保持可訪問性 */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 焦點樣式 */
+.focus-visible:focus {
+    outline: 3px solid #d4af37;
+    outline-offset: 2px;
+}
+
+/* 無選取 */
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* GPU 加速 */
+.gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }

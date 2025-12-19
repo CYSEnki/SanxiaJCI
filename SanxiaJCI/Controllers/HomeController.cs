@@ -33,6 +33,11 @@ namespace SanxiaJCI.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult Book_2026()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult Login()
         {
@@ -41,6 +46,11 @@ namespace SanxiaJCI.Controllers
         }
 
         public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult ChapterRelations()
         {
             return View();
         }

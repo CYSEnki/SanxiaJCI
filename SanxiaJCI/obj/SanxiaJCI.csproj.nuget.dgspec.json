@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Source\\SanxiaJCI\\SanxiaJCI\\SanxiaJCI.csproj": {}
+    "C:\\Source\\SanxiaJCI\\SanxiaJCI\\SanxiaJCI.csproj": {}
   },
   "projects": {
-    "D:\\Source\\SanxiaJCI\\SanxiaJCI\\SanxiaJCI.csproj": {
+    "C:\\Source\\SanxiaJCI\\SanxiaJCI\\SanxiaJCI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\SanxiaJCI.csproj",
+        "projectUniqueName": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\SanxiaJCI.csproj",
         "projectName": "SanxiaJCI",
-        "projectPath": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\SanxiaJCI.csproj",
+        "projectPath": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\SanxiaJCI.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Source\\SanxiaJCI\\SanxiaJCI\\obj\\",
+        "outputPath": "C:\\Source\\SanxiaJCI\\SanxiaJCI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.12.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.22, )"
             }
           },
           "imports": [
@@ -75,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
